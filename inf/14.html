@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<h2>Programovací jazyky</h2> 
+
+<p>Programovací jazyky jsou jazyky sloužící k tvorbě počítačových programů (programování). Programování je proces algoritmizace dané úlohy, tj. vytváření postupu, jenž vede k řešení dané úlohy.</p>
+<p>XML, HTML, WML apod. nejsou programovací jazyky ale <a href="http://k-prog.wz.cz/ostatni/znack.php">jazyky značkovací</a>.</p>
+<h3>Dělení programovacích jazyků</h3>
+<p>Programovací jazyky se dají rozdělit podle mnoha kritérií. Nejčastější způsoby jsou tyto:</p>
+<h4>Vyšší a nižší</h4>
+<p><strong>Nižší programovací jazyky</strong> jsou jazyky primitivní, jejichž instrukce (víceméně přesně) odpovídají příkazům procesoru. To znamená, že procesor bude vykonávat ty instrukce, které programátor napíše. Jsou závislé na svém procesoru a nepřenositelné na jiný (nepříbuzný) procesor (program z 386 na Pentiu pojede, ale na Atari (s procesorem Motorola) ne).</p>
+<p>V praxi to vypadá tak, že programátor musí vypisovat &#8222;každou pitomost&#8220;, i jednoduchý program má neúměrně složitý zdrojový kód. Výhodou je, že programátor má takto přístup i k funkcím počítače, které by měl ve vyšším programovacím jazyce nedosažitelné.</p>
+<p>Patří sem jazyk symbolických adres (<a href="http://k-prog.wz.cz/progjaz/assemb.php">Assembler</a>) a strojový kód (to, co uvidíte, když se vám podaří natáhnout obsah exe souboru do textového editoru). Vzláštním typem nižšího jazyka je tzv. <em>autokód</em>, který spojuje prvky nižších a vyšších jazyků. Vznikl rozšířením Assembleru o jednoduché příkazy pro často používané skupiny instrukcí.</p>
+<p><strong>Vyšší</strong> (problémově orientované) <strong>programovací jazyky</strong> jsou podstatně srozumitelnější, struktura jejich zdrojových je logická, nejsou závislé na strojových principech počítače. Do strojového kódu se převádějí kompilátorem (případně se rovnou spouštějí interpretrem viz dále). V praxi je vyšší programovací jazyk vše, co není Assembler, to znamená: Pascal, Basic, Prolog, Lisp, Algol, Fortran, &#8230;</p>
+<p>Často se uvádí, že jazyk C je jakýmsi přechodem mezi vyššími a nižšími jazyky, má však blíže k vyšším.</p>
+<h4>Imperativní, logické a funkcionální</h4>
+<p><strong>Imperativní</strong> (též <em>procedurální</em>) jazyky jsou téměř všechny jazyky, které se běžně používají. K řešení úlohy se používá algoritmu (postup, jak se má daná úloha vyřešit). Např. Pascal, C, Basic, PHP, Perl, &#8230;</p>
+<p>U <strong>logických</strong> jazyků programátor pouze popíše daný problém pomocí logických výroků. Program z nich potom vyvozuje požadované informace. Někdy se používají ke tvorbě umělé inteligence, k praktickému programování jsou nevyužitelné. Např. Prolog.</p>
+<p>Ve <strong>funkcionálních</strong> jazycích se vše popisuje pomocí funkcí, často neexistují proměnné, program je vlastně jen složitou soustavou funkcí. Často se pracuje se seznamy. Tento způsob programování je bližší klasické matematice, obecně je však velmi nepřehledný. Avšak pro některé problémy jsou tyto jazyky vhodnější než imperativní. Např. Lisp, Haskell, Miranda, &#8230;</p>
+<p>Logickým a funkcionálním jazykům se někdy společně říka <em>deklarativní jazyky</em> (též neprocedurální). Některé jazyky mají prvky funkcionální i imperativní. Například víceméně funkcionální Scheme dovoluje programovat i imperativně, naopak imperativní <a href="http://k-prog.wz.cz/python/index.php">Python</a> umožňuje i funkcionální styl programování.</p>
+<h4><a name="interp"></a>Interpretované a kompilované</h4>
+<p>Interpretované jazyky jsou překládány až za běhu programu. Jsou pomalejší, ale nemají tak velké formální požadavky (není potřeba inicializovat proměnnou, její datový typ se může za běhu měnit, ukazatele jsou zbytečné). Překládají se interpretrem, ten instrukce zároveň při překladu provádí. Hlavní nevýhodou těchto jazyků je, že se musejí vždy spouštět v interpretru. Do této skupiny patří většina verzí Basicu, všechny skriptovací jazyky (PHP, Python, &#8230;).</p>
+<p>Kompilované jazyky jsou celé přeloženy a až potom mohou být spušněny. Jsou rychlejší, mají vyšší nároky na formální správnost kódu. Překádají se kompilátorem, výsledkem překladu je (většinou) .exe soubor. Patří sem většina klasických programovacích jazyků.</p>
+<p>Teoreticky může mít jeden programovací jazyk verzi interpretovanou i kompilovanou.</p>
+<h4>Další způsoby dělení</h4>
+<p>Existuje ještě celá řada způsobů, jak dělit programovací jazyky. Např. u imperativních jazyků se mnohdy rozlišují ty, které podporují <strong>objektově orientované</strong> programování (OOP) nebo programování <strong>strukturované</strong>.</p>
+<p><strong>Dělení podle účelu.</strong> Zde je velmi obtížné přesně vymezit jednotlivé skupiny. Mnohé jazyky mají velmi široké použití, mnohdy jsou rozšířeny v mírných úpravách na většině operačních systémů. Avšak dosud nebyl vynalezen jazyk, který by byl vhodný úplně na všechno. A asi ani nikdy vynalezen nebude. Například velmi rozšířený jazyk C je vhodný hlavně na programování operačních systémů a dalších &#8222;nízkých&#8220; aplikací. Assembler se používá k přístupu k hardwaru. PHP se dá použít pouze u internetových stránek. Atd. atd.</p>
+<p>Jazyky se dají rozdělit na <strong>moderní a zastaralé</strong>. Toto dělení je však poněkud subjektivní. Mezi moderní jazyky však určitě patří PHP, Python, Delphi a Java. Zastaralé jsou zase např. Algol, Fortran a QBasic. Určitým evrgrínem je jazyk C, který sice vznikl na začátku 70. let, avšak používá se (většinou v modernizované podobě – C++) dodnes. Podobně je na tom i nejstarší programovací jazyk (pokud nepočítáme strojový kód) – Assembler. Ten je totiž v některých případech nenahraditelný.</p>
+<h3><a name="progj"></a>Přehled programovacích jazyků</h3>
+<p>Programovacích jazyků je ohromné množství a stále vznikají další a další. Zde je soupis těch asi nejvýznamnějších.</p>
+<h4>Ada</h4>
+<p>Jazyk určený k výrobě bezpečných a spolehlivých programů. Vyznačuje se velmi silnou typovou kontrolou. Velmi univerzální jazyk, píše se v něm i řídící software pro různé stroje včetně letadel, raketoplánů a dalších. Syntakticky vychází z Pascalu.</p>
+<h4>Algol</h4>
+<p><strong>Algo</strong>rithmic <strong>L</strong>anguage = algoritmický jazyk. Jeden z nejstarších programovacích jazyků (byl vytvořen na přelomu 50. a 60. let). Byl zaměřen na řešení zejména vědeckých a technických úloh. Ačkoliv obsahoval mnoho moderních prvků (které se používají dodnes), příliš se nerozšířil. Je základem všech moderních jazyků. Existuje spousta verzí Algolu, např. Algol 58, <strong>Algol 60</strong>, Algol 68.</p>
+<h4>APL</h4>
+<p><strong>A</strong> Computer <strong>P</strong>rograming <strong>L</strong>anguage = počítačový programovací jazyk. Programovací jazyk, jehož syntaxe vychází z matematické notace, nepodobá se tedy žádnému jinému programovacímu jazyku. Má speciální sadu znaků, nedá se zapisovat pomocí ASCII kódování, ale kódování Unicode už stačí. Má velmi úsporný kód a vynikající vyjadřovací schopnosti.</p>
+<h4>ASP</h4>
+<p><strong>A</strong>ctive <strong>S</strong>erver <strong>P</strong>ages. Serverový skriptovací jazyk od Microsoftu. Má obdobné možnosti jako PHP, ale poněkud složitější syntaxi. Existuje jen na serverech s operačním systémem windows.</p>
+<h4>Assembler</h4>
+<p><a href="http://k-prog.wz.cz/progjaz/assemb.php">Assembler</a> = sestavitel (programu).</p>
+<h4>Baltazar a Baltík</h4>
+<p>Programovací jazyky českého původu, určené pro výuku programování u dětí. Baltazar je bližší normálnímu programovacímu jazyku, programy se v něm tvoří z klávesnice, používají se v něm česká slova a je určen zejména starším dětem. Naproti tomu Baltík je určen těm nejmenším, ovládá se pouze myší a soustředí se na rozvoj logického myšlení.</p>
+<h4>Basic</h4>
+<p><strong>B</strong>eginners <strong>A</strong>ll-purpose <strong>S</strong>ymbolic <strong>I</strong>nstruction <strong>C</strong>ode = Pro začátečníky určený víceúčelový programovací prostředek. O<a href="http://k-prog.wz.cz/progjaz/basic.php">dkaz</a>.</p>
+<h4>C</h4>
+<p>Jazyk relativně nízké úrovně, původně zaměřený na programování operačních systémů. Má velmi úsporné vyjadřování, a proto je poněkud nepřehledný. Existuje velké množství rozšíření jazyka, nejznámější je objektově orientované C++. Syntaxi &#8222;céčka&#8220; převzala pousta dalších jazyků (PHP, Java, Perl, &#8230;).</p>
+<p><a href="http://k-prog.wz.cz/prehledy/prehled_c.htm">Přehled syntaxe C/C++</a></p>
+<h4>Cobol</h4>
+<p><strong>Co</strong>mmon <strong>B</strong>usiness <strong>O</strong>riented <strong>L</strong>anguage = obecně obchodně orientovaný jazyk. Jeden z nestarších vyšších programovacích jazyků. Vznikl z potřeby programovacího jazyka pro obchodní a ekonomické úlohy, pro úlohy s hromadným zpracováním dat. Opět existuje mnoho verzí tohoto jazyka, např. Cobol-60, Cobol-61, Cobol-65, Cobol-69,&#8230;</p>
+<h4>Delphi</h4>
+<p>Programovací jazyk pro Windows. Správně se jmenuje Object Pascal (objektově orientovaný Pascal). Jeho prostředí je vizuální, to znamená, že programátor určuje vzhled programu &#8222;kreslením&#8220; myší, stejným způsobem i vytváří některé části kódu. Samotný kód se celý skládá z procedur &#8211; reakcí na události (klik na prvek, &#8230;).</p>
+<h4>Fortran</h4>
+<p><strong>For</strong>mula <strong>Tran</strong>slation = překlad vzorců. Vůbec první vyšší programovací jazyk. Vznikl v padesátých letech 20. století (první oficiální verze 1957), byl vhodný spíše k matematickým výpočtům. Znamenal ohromný pokrok ve vývoji programování, v podstatě všechny vyšší jazyky z něj (alespoň nepřímo) vycházejí. Dnes se používá již jen velmi málo.</p>
+<h4>HTML</h4>
+<p>Není <em>programovací</em> jazyk, ale jazyk pro práci s hypertextem (resp. formát hypertextu).</p>
+<p>odkaz <a href="http://k-prog.wz.cz/ostatni/znack.php">Značkovací jazyky</a></p>
+<h4>Java</h4>
+<p>Objektově orientovaný programovací jazyk nezávislý na platformě. Vyvinula jej firma Sun Microsystems. Používá se téměř všude, jako doplnění internetových stránek klientským skriptem (java applet), serverový skript (JSP), stejně jako na hry do mobilů i obyčejné programy pro jakýkoli operační systém. Vychází z jazyka C++ (jako mnoho jiných jazyků), který poněkud zjednodušuje. Jako konkurenční jazyk od Microsoftu vznikl C#.</p>
+<h4>JavaScript</h4>
+<p>Nejčastěji používaný internetový klientský skriptovací jazyk. Proběhne až v internetovém prohlížeči (na rozdíl např. od PHP, které proběhne už na serveru). Z bezpečnostních důvodů může ovlivňovat jen internetovou stránku, nikoli uživatelský počítač. Podobně je na tom i méně používaný VBScript. <a href="http://k-prog.wz.cz/javascr/index.php">Odkaz na JavaScript</a></p>
+<h4>Karel</h4>
+<p>Jednoduchý, prakticky nevyužitelný interpretovyný jazyk určený k výuce programování. Má pouze několik málo příkazů (záleží na verzi, většinou do jedné desítky). Těmito příkazy je ovládán robot, který se dokáže pohybovat se ve svém &#8222;městě&#8220; a zvedat/pokládat značky. Původně byl anglický (byl však nazván česky: <em>Karel</em> po Karlu Čapkovi). Byla vytvořena i počeštěná verze s českými příkazy. Existuje i objektově orientovaný Karel++.</p>
+<h4>Lisp</h4>
+<p><strong>Lis</strong>t <strong>p</strong>rocessing. Nejstarší neprocedurální jazyk. Veškeré problémy řeší pomocí symbolů a jejich seznamů. Používá se v programování umělé inteligence. Má velké množství dialektů. Odvozeny jsou od něj např. jazyky Tcl, Scheme, &#8230;</p>
+<h4>Logo</h4>
+<p>Interpretovaný programovací jazyk určený pro výuku dětí. Vychází z Lispu. Je známý zejména pro kreslení v tzv. &#8222;želví&#8220; grafice &#8211; po kreslící ploše se pohybuje podle pokynů programátora &#8222;želva&#8220;, která za sebou nechává barevnou stopu.</p>
+<h4>Modula 2</h4>
+<p>Vychází z Pascalu, používal se i ke tvorbě hodně velkých projektů, podporuje modulární programování.</p>
+<h4>Pascal</h4>
+<p><a href="http://k-prog.wz.cz/pascal/index.php">Odkaz</a>.</p>
+<h4>Perl</h4>
+<p><strong>P</strong>ractical <strong>E</strong>xtraction <strong>R</strong>eport <strong>L</strong>anguage. Téměř univerzální interpretovaný jazyk. Dá se v něm napsat prakticky cokoliv, ale v praxi se používá zejména k psaní CGI skriptů (internetová technologie, serverový skript založený na výstupu .exe souboru) a v těch případech, kdy je potřeba složitě zpracovávat text. Je dosti nepřehledný.</p>
+<h4>PHP</h4>
+<p><strong>P</strong>ersonal <strong>H</strong>ome <strong>P</strong>age Tools (zkratka se vyvíjela &#8211; např.:Personal Home Page Construction Kit, dnes: PHP:Hypertext Preprocesor, a to první P je z historických důvodů.).</p>
+<p>Internetový skriptovací jazyk (serverový) používaný k tvorbě webových stránek. Instrukce se vkládájí do HTML kódu, syntaxe je podobná jazyku C. Práce programu probíhá v serveru, na uživatelský počítač se posílají jen výsledky. Má ohromné možnosti: dokáže pracovat s databázemi, s velkým množstvím internetových protokolů (IMAP, POP3, SMTP &#8211; zpracování emailů; NNTP &#8211; news protokol; &#8230;), dokáže vytvářet obrázky a PDF soubory, má spoustu funkcí na zpracování řetězců, &#8230; Navíc je zdarma a volně šiřitelné! Oficiální stránky: <a href="http://www.php.net/">www.php.net</a>.</p>
+<p>Další serverové skriptovací jazyky (ale už ne tak dobré) jsou: zastaralé SSI a výlučně windowsácké ASP.</p>
+<h4>PL/1</h4>
+<p><strong>P</strong>rograming <strong>L</strong>anguage <strong>1</strong>. Starý neúspěšný programovací jazyk vycházející z Fortranu. Nepoužívá se. Byl to první pokus o co nejuniverzálnější programovací jazyk.</p>
+<h4>Prolog</h4>
+<p><strong>Pro</strong>gramming in <strong>Log</strong>ic = logické programování. Je to neprocedurální jazyk (na rozdíl od většiny ostatních jazyků), popisuje programátorský problém pomocí logických výroků. Používá se k řešení problémů, které se dají popsat ve formě objektů a vztahů mezi nimi, k tvorbě umělé inteligence. Celý program v Prologu vypadá jako výpis jednoduchých vztahů mezi objekty. Z nich potom Prolog vyvozuje další informace na základě našich dotazů. Praktické využití Prologu je velmi malé.</p>
+<h4>Python</h4>
+<p>Název odvozen z názvu britského pořadu Monty Python&#8217;s Flying Circus. Python je značně univerzální interpretovaný programovací jazyk, rozšířený na všech běžně používaných operačních systémech. Má obdobné vlastnosti jako Perl, k němuž bývá často přirovnáván. Oproti němu je však přehlednější.</p>
+<p><a href="http://k-prog.wz.cz/python/index.php">Odkaz</a>.</p>
+<h4>Scheme</h4>
+<p>Jazyk odvozený od Lispu, někdy považován za jeho dialekt.</p>
+<h4>Simula</h4>
+<p><strong>Sim</strong>ple <strong>U</strong>niversal <strong>La</strong>nguage &#8211; jednoduchý univerzální jazyk. Objektově orientovaný jazyk vhodný pro počítačovou simulaci.</p>
+<h4>Snobol</h4>
+<p><strong>S</strong>tri<strong>n</strong>g <strong>O</strong>riented Sym<strong>bo</strong>lic <strong>L</strong>anguage &#8211; Jazyk určený pro práci s řetězci. První jazyk zaměrený zejména na zpracování textových řetězců. V dnešní době byl nahrazen zejména Perlem a dalšími jazyky.</p>
+<h4>SSI</h4>
+<p><strong>S</strong>erver <strong>S</strong>ide <strong>I</strong>ncludes &#8211; vsuvky na straně serveru. Jednoduchý zastaralý serverový skriptovací jazyk. Nemá zdaleka takové možnosti jako PHP nebo ASP.</p>
+<h4>Tcl</h4>
+<p><strong>T</strong>ool <strong>C</strong>ommand <strong>L</strong>anguage. Univerzální skriptovací jazyk. Je oblíben zejména díky knihovně Tk, která umožňuje psát programy s grafickým rozhraním.</p>
+<h4>Visual Basic</h4>
+<p>Programovací jazyk pro Windows od Microsoftu. Má vizuální prostředí. Dají jím vytvářet jak klasické aplikace, tak i makra do dokumentů wordu. Má prvky mnoha moderních jazyků (je objektově orientovaný), ale přetrvávají i zastaralé qbasicovské vlivy (absence složeného příkazu, &#8222;repeat..until styl&#8220; <em>všech</em> cyklů i podmínek &#8211; viz <a href="http://k-prog.wz.cz/progjaz/basic.php#qbas">QBasic</a>).</p>
+<h4>VBScript</h4>
+<p><strong>V</strong>isual <strong>B</strong>asic <strong>Script</strong>. Internetový skriptovací jazyk, běžící u klienta, obdoba JavaScriptu. Vychází z Visual Basicu. Jeho největší nevýhoda (oproti JavaScriptu) je, že jej podporuje jen IE. V podstatě se jedná o nepovedený pokus Microsoftu konkurovat JavaScriptu. Údajně jde jeho zdroják zakódovat, aby nešel okopírovat.</p>
+<h4>XML</h4>
+<p><em>Není programovací jazyk, ale jazyk pro práci s daty.</em></p>
+<h3>Základy programování</h3>
+<ul>
+<li><strong>Programování</strong> &#8211; algoritmus, program, postup při tvorbě programu, metody programování</li>
+<li><strong>Programovací jazyky</strong> &#8211; rozdělení, srovnání – Pascal, Delphi, C# a Java</li>
+<li><strong>Vývojový diagram</strong> &#8211; značky a zásady, příklad diagramu</li>
+<li><strong>Programové struktury</strong> &#8211; podmínky, větvení, cykly – znázornění ve VD</li>
+</ul>
+<hr />
+<h4>Programování</h4>
+<ul>
+<li><strong>Základní pojmy</strong>
+<ul>
+<li>algoritmus – postup řešení problému – <a id="ic8417a5dcf36b78bafe1b580adea50e" href="http://www.jenzeny.cz/recepty">recept</a>, výrobní návod, návod k obsluze …</li>
+<li>počítačový algoritmus – jednoznačný postup pro zpracování dat</li>
+<li>program – posloupnost příkazů, která určuje způsob zpracování dat</li>
+</ul>
+</li>
+<li><strong>Postup při tvorbě programu</strong>
+<ul>
+<li>Analýza problému – definice zadání a možností řešení dané úlohy</li>
+<li>Koncept řešení – volba metod řešení, rozložení řešení na dílčí úlohy</li>
+<li>Sestavení algoritmu řešení – návrh datové struktury, zápis algoritmu</li>
+<li>Zápis programu v programovacím jazyce</li>
+<li>Ověření programu – překlad – kompilace a ověření správnosti programu</li>
+<li>Optimalizace programu – vylepšování programu, kontrola vstupních a výstupních dat</li>
+</ul>
+</li>
+<li><strong>Metody programování</strong>
+<ul>
+<li>Strukturované programování – členění programu na jednoduché celky – struktury</li>
+<li>Vizuální programování – sestavení programu pomocí vizuálních komponent a řídících akcí</li>
+<li>Objektové programování – řešení je modelováno pomocí objektů, které obsahují data i metody zpracování</li>
+</ul>
+</li>
+</ul>
+<h4>Programovací jazyky</h4>
+<ul>
+<li><strong>Rozdělení</strong></li>
+</ul>
+<div>podle úrovně&nbsp;</p>
+<ul>
+<li><strong>nižší</strong> pr. jazyky – využití sady instrukcí procesoru</li>
+</ul>
+<div>Strojový kód nebo Assembler</div>
+<ul>
+<li><strong>vyšší</strong> programovací jazyky – srozumitelné příkazy a instrukce překládány pro OS a procesor</li>
+</ul>
+<div>C, C#, Java, Pascal, VisualBasic …</div>
+</div>
+<div>podle způsobu překladu&nbsp;</p>
+<ul>
+<li><strong>interpretované</strong> &#8211; spouštěné v běhovém prostředí(Interpreter), které postupně překládá a vykonává příkazy</li>
+</ul>
+<div>JavaScript, PHP, Python …</div>
+<ul>
+<li><strong>kompilované</strong> &#8211; přeložené do spustitelného tvaru (exe) pomocí překladače (kompilátoru)</li>
+</ul>
+<div>C, C#, Java, Pascal, VisualBasic …</div>
+</div>
+<ul>
+<li><strong>Srovnání</strong></li>
+</ul>
+<div><strong>C</strong>&nbsp;</p>
+<ul>
+<li>historicky nejstarší, vyvinutý v 70. letech pro OS Unix, předchůdce C++, Java a C#</li>
+<li>programování OS, systémových aplikací, překladačů a interpreterů</li>
+</ul>
+</div>
+<div><strong>Pascal</strong>&nbsp;</p>
+<ul>
+<li>jazyk vyvinutý na univerzite v Curychu v 70. letech pro výuku programování</li>
+<li>programování aplikací pro DOS – TurboPascal, pro Windows – ObjectPascal a Delphi</li>
+</ul>
+</div>
+<div><strong>Delphi</strong>&nbsp;</p>
+<ul>
+<li>v podstatě objektově rozšířený jazyk Pascal využívající vizuální komponenty (VCL)</li>
+<li>rychlý vývoj jednodušších aplikací pro Windows</li>
+</ul>
+</div>
+<div><strong>C#</strong>&nbsp;</p>
+<ul>
+<li>moderní, univerzální jazyk vyvíjený Microsoftem pro Windows</li>
+<li>využívá běhové prostředí a knihovny MS .NET</li>
+</ul>
+</div>
+<div><strong>Java</strong>&nbsp;</p>
+<ul>
+<li>univerzální, vyvinutý firmou SUN Microsystems v 90. letech</li>
+<li>nejpoužívanější, vychází z C a C++, Open <a id="d84c195257f31acc6c" href="http://www.brooklyn-shop.cz/source">source</a> licence</li>
+</ul>
+</div>
+<img title="jazyky" src="http://info.spsnome.cz/uploads/Maturita/prog-jazyky.jpg" alt="jazyky" />&nbsp;</p>
+<h4>Vývojové diagramy</h4>
+<ul>
+<li><strong>Vlastnosti a značky</strong>
+<ul>
+<li>názorný způsob zobrazení způsobu řešení úlohy</li>
+<li>normalizované značky ČSN 36 9030 a ČSN <a id="q12cd3e" href="http://www.tuev-nord.cz/37882.asp">ISO</a> 58071996</li>
+</ul>
+</li>
+</ul>
+<h4>Programové struktury</h4>
+
+
+
+<ul>
+<li>Podmínka neúplná</li>
+</ul>
+
+<ul>
+<li>Podmínka úplná</li>
+</ul>
+
+<ul>
+<li>Vícenásobné větvení</li>
+</ul>
+
+<ul>
+<li>Seskupení příkazů</li>
+</ul>
+
+<ul>
+<li>Cyklus se podmínkou na začátku</li>
+</ul>
+
+<ul>
+<li>Cyklus s podmínkou na konci</li>
+</ul>
+
+<ul>
+<li>Cyklus s počítadlem</li>
+</ul>
+
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

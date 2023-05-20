@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<style>
+span:before
+{
+content: " ";	
+}
+</style>
+
+<h2>Tvorba webu</h2>
+
+<h3>Osnova</h3>
+<ul>
+<li><strong>Základní pojmy</strong> &#8211; WWW, HTML, web, hosting a doména</li>
+<li><strong>HTML</strong> &#8211; tagy a atributy, značky pro formátování, odkazy, obrázky, tabulky</li>
+<li><strong>Webová stránka</strong> &#8211; struktura a prvky stránky, uspořádání webu</li>
+<li><strong>Tvorba webu</strong> &#8211; HTML editory, přístupnost webu, návštěvnost web</li>
+<li><strong>Typografie</strong> &#8211; písma, fonty, velikost, kontrast</li>
+<li><strong>Barvy</strong> &#8211; barevné modely, kódování barev, barevná schemata</li>
+<li><strong>Grafika</strong> &#8211; typy grafiky, obrázky, pozadí strany, průhlednost, animace</li>
+<li><strong>Programování</strong> &#8211; možnosti, principy, prostředky</li>
+</ul>
+<hr />
+<h3>Základní pojmy</h3>
+<ul>
+<li><strong>WWW</strong> &#8211; <strong>W</strong>orld <strong>W</strong>ide <strong>W</strong>eb &#8211; celosvětová informační internetová služba</li>
+<li><strong>HTML</strong> &#8211; <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage &#8211; značkový jazyk pro tvorbu hypertextu</li>
+<li><strong>Web</strong> &#8211; prezentace instituce, firmy, osoby &#8230; formou www stránek</li>
+<li><strong>Doména</strong> &#8211; popisná adresa webového místa
+<ul>
+<li>generické, národní, druhého a třetího řádu &#8211; COM, INFO, CZ, UK, DE, GYMVLA.CZ, INFO.SPSNOME.CZ</li>
+<li>registrátor &#8211; registrace, správa &#8211; správce domény &#8211; NIC.CZ, DOMENY.CZ, ENDORA.CZ, WEBZDARMA.CZ &#8230;</li>
+</ul>
+</li>
+<li><strong>Webhosting</strong> &#8211; diskový prostor serveru poskytovatele pro vystavení souborů prezentace (free a placený)</li>
+</ul>
+<h3>HTML</h3>
+<ul>
+<li><strong>Tagy</strong> &#8211; normalizované značky pro formátování a rozložení obsahu webové stránky
+<ul>
+<li>většina tagů párové značky &#8211; <code>&lt;p&gt; ...text... &lt;/p&gt;</code> příklad vyznačení textového odstavce</li>
+</ul>
+</li>
+<li><strong>Atributy</strong> &#8211; vlastnosti tagů &#8211; <code>&lt;img src="logo.gif" alt="logo"/&gt;</code> soubor obrázku, alternativní text logo</li>
+<li><strong>Typy značek</strong>
+<ul>
+<li><strong>Stylové</strong>
+<ul>
+<li><code>&lt;b&gt;, &lt;i&gt;, &lt;u&gt;, &lt;style&gt;, &lt;br/&gt;</code></li>
+</ul>
+</li>
+<li><strong>Strukturální</strong>
+<ul>
+<li><code>&lt;head&gt;, &lt;body&gt;, &lt;h1&gt; ...&lt;h6&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;hr/&gt;</code></li>
+</ul>
+</li>
+<li><strong>Informační</strong>
+<ul>
+<li><code>&lt;!doctype&gt;, &lt;html&gt;, &lt;title&gt;, &lt;meta&gt;, &lt;!-- komentář --&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Hypertextové odkazy</strong> &#8211; tlačítka menu, texty a obrázky pro zobrazení jiné www stránky
+<ul>
+<li><code>&lt;a href="adresa_odkazu"&gt;Text odkazu&lt;/a&gt;</code></li>
+</ul>
+</li>
+<li><strong>Obrázky</strong> &#8211; úsporná grafika &#8211; JPG, GIF, PNG
+<ul>
+<li><code>&lt;img src=obrazek.jpg" /&gt;</code></li>
+</ul>
+</li>
+<li><strong>Tabulky</strong> &#8211; přehled údajů, dříve uspořádání obsahu webové stránky
+<ul>
+<li><code>&lt;table&gt;</code></li>
+<li><code>&lt;tr&gt;&lt;td&gt;1.buňka&lt;/td&gt;&lt;td&gt;2.buňka&lt;/td&gt;&lt;/tr&gt;</code></li>
+<li><code>&lt;tr&gt;&lt;td&gt;3.buňka&lt;/td&gt;&lt;td&gt;4.buňka&lt;/td&gt;&lt;/tr&gt;</code></li>
+<li><code>&lt;/table&gt;</code></li>
+</ul>
+</li>
+</ul>
+<a title="xhtml" href="http://www.jakpsatweb.cz/html/xhtml.html">XHTML (E<strong>x</strong>tended HTML)</a>
+<h3>Webová stránka</h3>
+
+<h3><img class="alignnone" title="www stránka" src="http://info.spsnome.cz/uploads/Maturita/pvy-0801.jpg" alt="www stránka"></h3>
+<p><strong>Struktura</strong></p>
+<ul>
+<li><strong>Hlavička</strong> <code>&lt;head&gt; ... &lt;/head&gt;</code>
+<ul>
+<li>informace pro prohlížeč, vyhledávače a webový server</li>
+</ul>
+<div><code>&lt;title&gt;</code> &#8211; titulek</div>
+<div><code>&lt;meta ....&gt;</code> &#8211; znaková sada, jazyk, popis, klíčová slova &#8230;</div>
+<div><code>&lt;link ....&gt;</code> &#8211; připojení stylů a skriptů</div>
+<div><code>&lt;style ...&gt;</code> &#8211; definice stylů stránky</div>
+</li>
+<li><strong>Tělo</strong> <code>&lt;body&gt; ... &lt;/body&gt;</code>
+<ul>
+<li>Hypertextový odkaz</li>
+</ul>
+<div><code>&lt;a href="http://google.cz"&gt;Vyhledávač&lt;/A&gt;</code></div>
+<ul>
+<li>Obrázek</li>
+</ul>
+<div><code>&lt;img src="logo.gif"&gt;</code></div>
+</li>
+</ul>
+
+<h3>Šablona pro využití externího souboru css<a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/sablonahtml.png"><img title="šablona pro css" src="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/sablonahtml.png"></a></h3>
+<h3>Css soubor</h3>
+<h3><a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/stylcss.png"><img class="wp-image-389 alignnone" title="stylcss" src="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/stylcss.png"></a></h3>
+<h3>Tvorba webu</h3>
+<ul>
+<li><strong>HTML editory</strong>
+<ul>
+<li><strong>editory kódu</strong> &#8211; BlueFish, Doctor HTML editor, PsPad,  HomeSite
+<ul>
+<li>šablony kódu, doplňování a kontrola kódu, barevné zvýraznění</li>
+</ul>
+</li>
+<li><strong>vizuální editory</strong> &#8211; MS FrontPage, SharePoint Designer, Adobe DreamWeaver
+<ul>
+<li>šablony vzhledu, vizuálním (wysiwyg) prostředí, automatické generování kódu</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Přístupnost webu</strong>
+<ul>
+<li><strong>obsah</strong> &#8211; zajímavost, přehlednost, čitelnost a vzhled</li>
+<li><strong>validita</strong> &#8211; zápis kódu podle norem HTML, stejné zobrazení v různých prohlížečích</li>
+<li><strong>dostupnost</strong> &#8211; zajímavá adresa, optimalizace pro vyhledávače, registrace v katalozích</li>
+<li><strong>ovladatelnost</strong> &#8211; přehlednost, jednoduchost, logika, plná kontrola uživatele</li>
+</ul>
+</li>
+<li><strong>Návštěvnost webu</strong>
+<ul>
+<li><strong>SEO</strong> &#8211; Search Engine Optimization &#8211; optimalizace kódu pro vyhledávače
+<ul>
+<li>informace pro vyhledávače v hlavičkách &#8211; Titulek, Popis, Klíčová slova</li>
+<li>registrace do vyhledávačů a katalogů &#8211; Google, Seznam, Centrum, Jyxo</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>soubory map stránek webu &#8211; website.xml</li>
+<li><strong>Doporučené zásady pro tvorbu www stránek:</strong></li>
+
+<ol>
+<li>názvy všech souborů a složek malými písmeny bez diakritiky a mezer</li>
+<li>všechny soubory www stránek (*.html, *.css&#8230;) ukládám do jedné složky</li>
+<li>všechny soubory s obrázky ukládám do podsložky této složky např. obr, img, apod. (dopředu upravím velikost obrázků na cca 100 kB)</li>
+<li>všechny ostatní soubory (např. *.doc, *.xls, *.ppt, *.avi&#8230;) ukládám do jiné podsložky této složky např. ostatni</li>
+<li>hlavní soubor stránek pojmenuji index.html</li>
+<li>všechny tagy píši malými písmeny</li>
+<li>při tvorbě nového souboru nejdřív uložím soubor, pak vkládám obrázky a tvořím odkazy (kontroluji relativní cestu)</li>
+</ol>
+
+</ul>
+
+<h3>Typografie</h3>
+<ul>
+<li>nauka o písmu, jeho zákonitostech a správném užití</li>
+<li><strong>Písmo &#8211; pojmy</strong>
+<ul>
+<li><strong>Font</strong> &#8211; druh písma &#8211; Arial, Calibri, Verdana, Times New Romain &#8230;</li>
+<li><strong>Rodina fontů</strong> &#8211; Font-family &#8211; souhrn písem téhož druhu</li>
+<li><strong>Bezpatkové písmo</strong> &#8211; San-sherif &#8211; tahy stejně silné, technický charakter</li>
+<li><strong>Patkové písmo</strong> &#8211; Serif &#8211; patkové zakončení tahů, novinový charakter &#8230;</li>
+</ul>
+</li>
+<li><strong>Velikost písma</strong> &#8211; důležitá vlastnost pro zajištění čitelnosti a přehlednosti
+<ul>
+<li>přehlednost &#8211; zajištěna pomocí úrovní nadpisů &#8211; html tagy <code>&lt;h1&gt; - &lt;h6&gt;</code></li>
+<li>čitelnost &#8211; nastavení pomocí css vlastnosti <strong>font-size</strong> nebo pomocí zoomu prohlížeče
+<ul>
+<li>pojmenované výšky &#8211; &#8222;xx-small&#8220;, &#8222;x-small&#8220;, &#8222;small&#8220;, &#8222;medium&#8220;, &#8222;large&#8220;, &#8222;x-large&#8220; a &#8222;xx-large&#8220;</li>
+<li>relativní jednotky &#8211; obrazový bod &#8211; pixel &#8211; px, procento písma rodičovského prvku &#8211; %, násobek velikosti znaku <strong>M</strong> &#8211; em</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Výška řádku</strong> &#8211; důležitá vlastnost pro zajištění čitelnosti &#8211; <strong>line-size</strong> &#8211; px, %, em</li>
+<li><strong>Kontrast</strong> &#8211; určuje čitelnost závislou na rozdílu barvy písma a pozadí &#8211; color, background-color</li>
+</ul>
+
+<h3>Barvy</h3>
+<ul>
+<li><strong>Barevné modely</strong>
+<ul>
+<li><strong>Model RGB</strong> &#8211; aditivní, pro monitor
+<ul>
+<li>složky &#8211; red, green, blue</li>
+<li>stupně &#8211; 0 &#8211; 255</li>
+</ul>
+<div>0,0,0 &#8211; černá, 100,100,100 &#8211; šedá, 255,255,255 &#8211; bílá</div>
+</li>
+<li><strong>Model CMYK</strong> &#8211; substraktivní, pro tisk
+<ul>
+<li>složky &#8211; cyan, magenta, yellow, black</li>
+<li>stupně &#8211; 0 &#8211; 100</li>
+</ul>
+<div>0,0,0 &#8211; bílá, 0,0,0,100 &#8211; černá, 10,10,10 &#8211; šedá</div>
+</li>
+</ul>
+</li>
+<li><strong>Kódování barev v HTML</strong>
+<ul>
+<li>pojmenované barvy &#8211; <span style="color: red;"><strong>red</strong></span>, <span style="color: silver;"><strong>silver</strong></span>, <span style="color: #ff00ff;"><strong>magenta</strong></span>, <span style="color: navy;"><strong>navy</strong></span>&#8230;</li>
+<li>procentní kód RGB &#8211; <span style="color: #3380cc;"><strong>rgb(20%, 50%, 80%)</strong></span></li>
+<li>desítkový kód RGB &#8211; <span style="color: #33aa00;"><strong>rgb(80, 200, 0)</strong></span></li>
+<li>hexadecimální kód RGB &#8211; <span style="color: #0033ff;"><strong>#0033ff</strong></span></li>
+</ul>
+</li>
+</ul>
+<div><table>
+<tr>	
+<td><img title="" src="http://info.spsnome.cz/uploads/Maturita/rgb.jpg" alt="" /></td> <td><img title="" src="http://info.spsnome.cz/uploads/Maturita/cmyk.jpg" alt="" /></td>
+</tr>
+</table></div>
+<div>
+<div id="highlighter_12528">
+
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<ul>
+<li><strong>Barevná schemata</strong>
+<ul>
+<li>kombinace barev použitých na daném webu
+<ul>
+<li><strong>monochromatické</strong> &#8211; černá, bílá + 1 barevný odstín</li>
+<li><strong>analogické barvy</strong> &#8211; použití podobných barev s jednou dominantní</li>
+<li><strong>komplementární barvy</strong> &#8211; použití dvou kontrastních barevných odstínů</li>
+</ul>
+</li>
+<li>možnost použití <a href="http://colorschemedesigner.com/" rel="nofollow" target="_blank"><strong>on-line generátoru</strong></a></li>
+<li>volba barevného ladění podle tématu webu
+<ul>
+<li>zelená &#8211; peníze, příroda; červená &#8211; láska; modrá a žlutá &#8211; cestování&#8230;</li>
+<li>použití firemních barev pro firemní prezentace</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>Grafika</h3>
+<h6> &#8211; pozor na velikost (stačí cca 800 x 600 px = cca 100 kB) &#8211; vhodná dávková konverze např. v XnView</h6>
+<ul>
+<li><strong>Typy grafiky</strong>
+<ul>
+<li>rastrová &#8211; JPG, PNG, GIF, ICO
+<ul>
+<li>fotografie, ikony, tlačítka, vzorky, barevné přechody</li>
+</ul>
+</li>
+<li>vektorové fonty &#8211; TTF, EOT</li>
+<li>vektorová grafika &#8211; SVG, SWF
+<ul>
+<li>písma, kliparty, kresby, loga, schémata</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Obrázky</strong>
+<ul>
+<li>využití tagu <strong>IMG</strong> s atributy &#8211; zdrojový soubor, rozměry, rámeček, popis, zarovnání (obtékání) v textu
+<div>
+<div id="highlighter_818067">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</td>
+<td>
+<div>
+<div><code>&lt;</code><code>img</code> <code>src</code><code>=</code><code>"foto.jpg"</code> <code>width</code><code>=</code><code>"60"</code> <code>height</code><code>=</code><code>"60"</code> <code>border</code><code>=</code><code>"1"</code> <code>alt</code><code>=</code><code>"Obrázek"</code> <code>align</code><code>=</code><code>"left"</code><code>&gt;</code></div>
+<div><code>&lt;!-- náhled s odkazem na obrázek --&gt;</code></div>
+<div><code>&lt;</code><code>a</code> <code>href</code><code>=</code><code>"obrazek.jpg"</code><code>&gt;&lt;</code><code>img</code> <code>src</code><code>=</code><code>"obrazek.jpg"</code> <code>width</code><code>=</code><code>"80"</code> <code>height</code><code>=</code><code>"50"</code> <code>alt</code><code>=</code><code>"popis obrázku"</code><code>&gt;&lt;/</code><code>a</code><code>&gt;</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li><strong>Pozadí strany</strong>
+<ul>
+<li>použití CSS pravidla <strong>BACKGROUND</strong> pro stylování prvku <strong>BODY</strong></li>
+<li>nastavení barvy pozadí, obrázku, pozice, opakování a ukotvení
+<div>
+<div id="highlighter_139668">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</td>
+<td>
+<div>
+<div><code>body {</code><code>background</code><code>: yellow </code><code>url</code><code>(</code><code>"pozadi.jpg"</code><code>) </code><code>bottom</code> <code>repeat-x</code> <code>fixed</code><code>}</code></div>
+<div><code>/* použití souhrnné vlastnosti background je stejné jako použití samostatných vlastností */</code></div>
+<div><code>body {</code><code>background-color</code><code>: yellow; </code><code>background-image</code><code>: </code><code>url</code><code>(</code><code>"pozadi.jpg"</code><code>); </code><code>background-position</code><code>: </code><code>bottom</code><code>;</code></div>
+<div><code>      </code><code>background-repeat</code><code>: </code><code>repeat-x</code><code>; </code><code>background-attachment</code><code>: </code><code>fixed</code><code>;}</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li><strong>Grafické efekty</strong>
+<ul>
+<li><strong>Průhlednost</strong> &#8211; CSS3 &#8211; vlastnost <strong>RGBA</strong> (red, green, blue, opacity)</li>
+<li><strong>Zaoblení</strong> &#8211; CSS3 &#8211; vlastnost &#8211; <strong>BORDER-RADIUS</strong> nebo <strong>BORDER-RADIUS-TOPLEFT</strong></li>
+<li><strong>Stínování</strong> &#8211; CSS3 &#8211; vlastnost <strong>TEXTSHADOW</strong>, <strong>BOXSHADOW</strong> (délka-x, délka-y, rozpití, barva)</li>
+<li><strong>Animace</strong> &#8211; CSS 3 &#8211; vlastnost <strong>ANIMATION</strong>, animované obrázky &#8211; GIF, animace s využitím technologie flash &#8211; SWF</li>
+<li><a href="http://programujte.com/clanek/2010070801-css3-drzte-krok-s-dobou-nove-vlastnosti/">http://programujte.com/clanek/2010070801-css3-drzte-krok-s-dobou-nove-vlastnosti/</a></li>
+</ul>
+</li>
+</ul>
+<h3>Programování</h3>
+<ul>
+<li><strong>Možnosti</strong>
+<ul>
+<li>soubory webu mohou obsahovat programové skripty</li>
+<li>skripty jsou krátké programy, které reagují na vnější události
+<ul>
+<li>načtení souboru, vložení hodnoty do formuláře, kliknutí na obrázek &#8230;</li>
+</ul>
+</li>
+<li>příkazy skriptu jsou postupně interpretovány a dochází ke zpracování zadaných dat
+<ul>
+<li>generování se HTML kódu, výpočet hodnot, odeslání mailu, zobrazení obrázků, vysunutí menu &#8230;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Principy</strong></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td valign="top"><strong>Programování na straně klienta</strong><br />
+<img title="klient" src="http://info.spsnome.cz/uploads/Maturita/client.jpg" alt="Zvětšit" width="250" /></td>
+<td valign="top"><strong>Programování na straně serveru</strong><br />
+<img title="server" src="http://info.spsnome.cz/uploads/Maturita/server.jpg" alt="Zvětšit" width="250" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Programovací jazyky</strong>
+<ul>
+<li><strong><a title="java script" href="http://info.spsnome.cz/WebDesign/JavaScript-Uvod">JavaSript</a></strong> &#8211; klientský prog. jazyk, interpret je součástí prohlížeče, syntaxe z jazyka C, objektový</li>
+<li><strong><a title="php" href="http://info.spsnome.cz/WebDesign/PHP-Uvod">PHP</a></strong> &#8211; serverový prog. jazyk, interpret běží na serveru, umožňuje ukládání dat v databázi</li>
+</ul>
+</li>
+</ul>
+<h3>Vývojové nástroje</h3>
+<ul>
+<li><strong>Servery</strong>
+<ul>
+<li><strong>Apache</strong> &#8211; webový server pro různé operační systémy</li>
+<li><strong>IIS</strong> &#8211; Internet Information Services &#8211; webový server pro Windows (IIS 7 součást WIN 7 PRO)</li>
+</ul>
+</li>
+<li><strong>Běhová prostředí</strong>
+<ul>
+<li>Prohlížeč</li>
+<li>PHP Preprocesor</li>
+<li>ASP.NET</li>
+</ul>
+</li>
+<li><strong>Vývojové systémy</strong>
+<ul>
+<li>NetBeans</li>
+<li>Aptana Studio</li>
+<li>Visual WebDeveloper</li>
+</ul>
+</li>
+</ul>
+<h3>Správa dat</h3>
+<ul>
+<li><strong>Principy</strong>
+<ul>
+<li>spolupráce databázového serveru s webovým serverem</li>
+<li>využití relačních databází s uložením dat formou tabulek</li>
+<li>využití příkazů <strong>SQL</strong> &#8211; Structured Query Language (strukturovaný dotazovací jazyk)</li>
+</ul>
+</li>
+</ul>
+<div><img title="Zvětšit" src="http://info.spsnome.cz/uploads/Maturita/data.jpg" alt="HTML" width="350" /></div>
+<ul>
+<li><strong>Prostředky</strong></li>
+<ul><li>Databáze MySQL</li></ul>
+</ul>
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<h2>Algoritmus a programovací jazyky</h2>
+<p>Počítačové programy (neboli software) umožňují počítačům, aby přestaly být pouhou stavebnicí elektronických a jiných součástek a staly se pomocníkem v mnoha lidských činnostech.</p>
+<p>Uživatelé počítače obvykle neovládají počítač přímo, ale využívají k tomu různé programy. (Příkladem lze uvést textový editor, operační systém nebo počítačovou hru.) Tento software musí být vytvořen jinými lidmi, ale ačkoli jsou programy určeny pro různé oblasti, existují společné základy, které se při tvorbě programů obvykle využívají. Právě na tyto základy je zaměřen tento kurz.</p>
+<p>Tvorba programů je činností, které se většinou věnují vysoce specializovaní jednotlivci v rámci různých softwarových společností. Po absolvování výuky základů algoritmizace se proto pravděpodobně nestanete skvělými tvůrci programů, pokud však pochopíte principy, bude cíl výuky naplněn. V tom případě totiž budete mít předpoklady pro případné další (a již konkrétnější) studium této oblasti a ani základní pojmy programování vám již nebudou cizí.</p>
+<p>Dnes již počítače pronikly téměř do všech oblastí lidské činnosti, používají se k řešení nejrůznějších úkolů. Postup, který je v počítači prováděn nějakým programem se nazývá <strong>algoritmus (program)</strong> a jeho tvorba <strong>algoritmizace (programování)</strong>.</p>
+<h3>Historie</h3>
+<p>Algoritmy vznikaly už dávno před zkonstruováním prvních počítačů. Slovo &#8222;algoritmus&#8220; vzniklo ze jména perského matematika, který žil v 9. století a jmenoval se Mohammed al-Khowarizmí (v latinském přepise Algoritmus). Zabýval se především pravidly pro aritmetické operace s čísly. Například Eukleidův algoritmus pro výpočet největšího společného dělitele dvou přirozených čísel pochází už z 4. až 3. století před naším letopočtem.</p>
+<h3>Algoritmus</h3>
+<p>Algoritmus je přesný popis, popisující určitý proces, který vede od měnitelných vstupních údajů k požadovaným výsledkům.<br />
+Jinými slovy &#8211; algoritmus je jednoznačný a přesný popis řešení problému.</p>
+<p><strong>Použití</strong></p>
+<ul>
+<li>při konstrukci či analýze algoritmů</li>
+<li>pro dokumentaci, pro zachycení myšlenky</li>
+</ul>
+<p><strong>Účel</strong></p>
+<ul>
+<li>názornost a přehlednost pro pochopení při algoritmizaci</li>
+<li>jednoznačný převod z textu programu do vývojového diagramu a naopak</li>
+<li>spíše nevhodné při návrhu celého (složitějšího) programu</li>
+</ul>
+<p><strong>Vstupní údaje</strong></p>
+<ul>
+<li>informace, ze kterých při řešení úlohy vycházíme, musí splňovat vstupní podmínku</li>
+</ul>
+<p><strong>Výstupní údaje</strong></p>
+<ul>
+<li>nově získané informace, které jsou výsledkem realizace algoritmu, musí splňovat výstupní podmínku</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Každý algoritmus musí mít tyto vlastnosti:</strong></p>
+<ul>
+<li><strong>správnost:</strong> výsledek, který vznikne použitím algoritmu, musí být správný</li>
+<li><strong>resultativnost:</strong> po konečném počtu kroků dospěje k řešení (vrátí třeba jen chybové hlášení)</li>
+<li><strong>konečnost: </strong>algoritmus se nezacyklí, po určitém počtu kroků skončí</li>
+<li><strong>determinovanost:</strong> v každém kroku je jednoznačně určen způsob pokračování práce algoritmu</li>
+<li><strong>hromadnost:</strong> znamená, že algoritmus lze použít pro řešení obecné úlohy, tj. že nepopisujeme postup jedné úlohy, ale poslouží k řešení libovolné úlohy, která patří do jisté třídy úloh</li>
+<li><strong>opakovatelnost:</strong> algoritmus vede vždy ke stejným výsledkům, jsou-li zadána stejná data</li>
+</ul>
+<p>Algoritmus nemusí nutně vyžadovat vstupní údaje a vracet výstupní.</p>
+<p>Některé problémy lze řešit více způsoby &#8211; různými algoritmy, které se mohou svým postupem značně lišit, ale vždy musí vést ke stejným výsledkům.</p>
+<p>Naší snahou je vybrat pro řešení problému co nejefektivnější algoritmus, který řeší problém v co nejkratším čase, je přehledný a srozumitelný.</p>
+<p><strong>Algoritmus lze vyjádřit:</strong></p>
+<ul>
+<li><strong>slovně:</strong> jednotlivé kroky postupu jsou vyjádřeny větami v přirozeném jazyce</li>
+<li><strong>graficky:</strong> jednotlivé kroky jsou popsány grafickými značkami se slovním popisem, například pomocí tzv. vývojových diagramů</li>
+<li><strong>matematicky:</strong> soustavou rovnic, vztahem mezi veličinami</li>
+<li><strong>programem:</strong> jednotlivé kroky jsou popsány instrukcemi určitého procesoru</li>
+</ul>
+<p><strong>Programování</strong> = zakódování algoritmu do zvoleného programovacího jazyka</p>
+<p><strong>Algoritmizace</strong> = proces vytváření a sestavování algoritmů</p>
+<p><strong>Efektivnost algoritmu</strong></p>
+<p>danou úlohu řeší více algoritmů, vybíráme efektivnějsší podle určitých kritérií:</p>
+<ul>
+<li><strong>časové:</strong> úloha vyřešena v kratším čase (uvažujeme strojový čas tj. počet instrukcí procesoru)</li>
+<li><strong>paměťové: </strong>spotřeba paměti</li>
+<li><strong>přehlednost, srozumitelnost:</strong> (důležité pro další vývoj a úpravy)</li>
+</ul>
+<p><strong>Programovací jazyk</strong> = umělý jazyk jenž se používá pro definování sekvence programových příkazů, které lze zpracovat na počítači. Algoritmus má obecnou povahu, zatímco implementace algoritmu v určitém programovacím jazyku je ryze konkrétní.</p>
+<h2>Dělení programovacích jazyků</h2>
+<h3>Nižší programovací jazyky</h3>
+<p>jsou jazyky primitivní, jejichž <strong>instrukce odpovídají příkazům procesoru</strong>. To znamená, že procesor bude vykonávat ty instrukce, které programátor napíše. Jsou <strong>závislé na svém procesoru</strong> a nepřenositelné na jiný procesor.<br />
+V praxi to vypadá tak, že programátor musí vypisovat vše. Pak i jednoduchý program má <strong>neúměrně složitý zdrojový kód</strong>. Výhodou je, že programátor má takto přístup i k funkcím počítače, které by měl ve vyšším programovacím jazyce nedosažitelné. Lépe tedy využije jeho schopnosti.</p>
+<h4>Patří sem:</h4>
+<ul>
+<li><strong>strojový kód</strong> (to, co uvidíte, když otevřete obsah „exe“ souboru v textovém editoru). Strojový kód = Soubor číslicových instrukcí, které je procesor počítače schopen rozpoznat a uskutečnit.<br />
+<center><img src="http://www.cmsps.cz/~marlib/diagramy/obr/code.gif" alt="" /></center></li>
+<li>jazyk symbolických adres (<a href="http://k-prog.wz.cz/progjaz/assemb.php">Assembler</a>) – je velice blízký strojovému kódu</li>
+</ul>
+<h3>Vyšší programovací jazyky</h3>
+<p>jsou podstatně srozumitelnější, jejich struktura je logická, <strong>nejsou závislé na strojových principech počítače</strong>. Do strojového kódu se převádějí <strong>kompilátorem</strong> (případně se rovnou spouštějí<strong> interpretrem</strong>). V praxi je vyšší programovací jazyk vše, co není Assembler (například jazyk C++, Pascal, Basic, Delphi..)</p>
+<h3>Programovací jazyky dále dělíme na</h3>
+<ul>
+<li>kompilované</li>
+<li>interpretované</li>
+</ul>
+<h4>Kompilované jazyky</h4>
+<p>jsou <strong>nejdříve celé přeloženy</strong> a až <strong>potom mohou být spuštěny</strong>. Jsou rychlejší, mají vyšší nároky na formální správnost kódu. Překládají se <strong>kompilátorem</strong>, výsledkem překladu je (většinou) .exe soubor. Patří sem většina klasických programovacích jazyků.<br />
+Teoreticky může mít jeden programovací jazyk verzi jak  interpretovanou, tak i kompilovanou.</p>
+<h4>Interpretované jazyky</h4>
+<p>jsou <strong>překládány až za běhu programu</strong>. Jsou pomalejší, ale nemají tak velké požadavky. Překládají se <strong>interpretem</strong>, ten <strong>instrukce</strong> zároveň při překladu <strong>provádí</strong>. Hlavní nevýhodou těchto jazyků je, že se musejí vždy spouštět v interpretu. Do této skupiny patří například Basic, skriptovací jazyky (PHP, Python, Perl &#8230;).</p>
+<h3>Další způsoby dělení programovacích jazyků</h3>
+<p>Programovací jazyky můžeme dále dělit na jazyky, které podporují:</p>
+<ul>
+<li>programování strukturované (např. Pascal)</li>
+<li>objektově orientované programování (OOP) – např. Visual Basic, Delphi</li>
+</ul>
+
+<h3>Algoritmizace</h3>
+<p>Algoritmizace je přesný postup, který se používá při tvorbě programu pro počítač, jehož prostřednictvím lze řešit nějaký konkrétní problém.</p>
+<h4>Algoritmizaci lze rozdělit do několika kroků</h4>
+<ol>
+<li>Formulace problému</li>
+<li>Analýza úlohy</li>
+<li>Vytvoření algoritmu</li>
+<li>Sestavení programu</li>
+<li>Odladění programu</li>
+</ol>
+<h4>Formulace problému</h4>
+<div>V této etapě je třeba přesně formulovat požadavky, určit výchozí hodnoty, požadované výsledky, jejich formu a přesnost řešení. Tvůrce algoritmu musí dokonale rozumět řešenému problému, jinak nemůže algoritmus sestavit &#8211; v praxi programátoři spolupracují s odborníky z oblastí, pro které mají vytvořit algoritmus.</div>
+<h4>Analýza úlohy</h4>
+<div>Při analýze úlohy si ověříme, zda je úloha řešitelná a uděláme si první představu o jejím řešení. Dále zjistíme, zda výchozí hodnoty jsou k řešení postačující a zda má úloha více řešení. Podle charakteru úlohy vybereme nejvhodnější a pokud možno nejjednodušší řešení.</div>
+<h4>Vytvoření algoritmu úlohy</h4>
+<div>Sestavíme jednoznačný sled jednotlivých instrukcí (příkazů), které je třeba provést, aby byl úkol správně vyřešen. Algoritmus přesně popisuje postup zpracování daného úkolu, nedává však odpověď na daný problém, ale pouze postup, jak ji získat.</div>
+<h4>Sestavení programu</h4>
+<div>Na základě algoritmu řešené úlohy sestavíme program (zdrojový text) v konkrétním programovacím jazyce. Ze zdrojového textu se pomocí překladače do strojového kódu vytvoří spustitelný program (případně interpretem se přeloží a spustí jednotlivé příkazy programu). Lze říci, že dobře provedená analýza úlohy a algoritmizace je velmi důležitá pro řešení daného problému a je základním předpokladem sestavení programu pro počítač.</div>
+<h4>Odladění programu</h4>
+<div>Odladěním chceme odstranit chyby z programu. Nejčastější chyby jsou chyby v zápise, tzv. <strong>syntaktické</strong> &#8211; ty odhalí překladač a dělají je i zkušení programátoři.<br />
+Horší jsou <strong>logické</strong> chyby, které vyplývají z nesprávně navrženého algoritmu, nebo chyby, které vzniknou  špatným předpokladem v etapě formulace nebo analýzy úlohy &#8211;  projeví se nesprávnou činností programu nebo špatnými výsledky &#8211; při odstraňování těchto chyb může pomoci ladící program <em>(debugger)</em> umožňující sledování aktuálního stavu proměnných a krokování.<br />
+Teprve po odstranění všech druhů chyb můžeme program použít k praktickému řešení úloh.</div>
+<h3>Skutečný postup při algoritmizaci v praxi</h3>
+<div>
+<p>Proces psaní příkazů v programovacím jazyce se nazývá <strong>programování</strong>. Aby programování skutečně vedlo k požadovanému výsledku, podílí se na vytvoření programu <strong>obvykle více osob</strong>.</p>
+<p>V prvé řadě je třeba přesně určit, co bude program umět – o tuto činnost se obvykle stará <strong>analytik</strong>. Analytik poté vypracuje určité zadání (nejprve zjistí a popíše řešený problém a poté naznačí jeho řešení), které předá <strong>vývojáři</strong> (označovanému také jako <strong>programátor</strong>). Vývojář podle popisu vytvoří program (přepíše řešení do programovacího jazyka). Zápis programu v programovacím jazyce se nazývá <strong>zdrojový kód</strong>. Poté je spuštěn program, který dokáže přeložit tento zdrojový kód do jazyka počítače, a vznikne tak spustitelný program. Prvotní otestování programu se nazývá jeho <strong>ladění</strong>.</p>
+<p>Vytvořením spustitelného programu práce ani zdaleka nekončí. Tento program dostane <strong>tester</strong>, který mu zadává různá data a zkoumá chování programu. Pokud objeví chybu, pak ji předá zpět programátorovi k dořešení.</p>
+<p>Poté je program předán uživatelům. V průběhu práce s programem může docházet k určitým požadavkům na změny – například v důsledku nakoupení nového počítače nebo pro vytvoření další funkce, kterou původní program neobsahoval. Stejně tak mohou uživatelé chtít, aby jim bylo vysvětleno, jak mají software používat. Této části „života programu“ se říká <strong>údržba a podpora</strong>.</p>
+
+<h2>Vývojové diagramy</h2>
+<p>Jedním z mnoha způsobů znázornění algoritmů jsou vývojové diagramy.<br />
+Ve vývojových diagramech se používá několik typů značek, z nichž každé je přiřazen určitý význam. Do těchto značek se vpisují operace nebo skupiny operací, které se mají provést.</p><p><img class="alignleft" src="http://upload.wikimedia.org/wikipedia/commons/5/55/Vyvojovy_diagram_zarovka.png"></p>
+<p><strong>Vývojový diagram</strong> je druh <a title="Diagram" href="http://cs.wikipedia.org/wiki/Diagram">diagramu</a>, který slouží k grafickému znázornění jednotlivých kroků <a title="Algoritmus" href="http://cs.wikipedia.org/wiki/Algoritmus">algoritmu</a> nebo obecného procesu.  Je to grafické znázornění logické struktury řešeného úkolu. Vývojový diagram používá pro znázornění jednotlivých kroků algoritmu symboly, které jsou navzájem propojeny pomocí orientovaných šipek. Symboly reprezentují jednotlivé procesy, šipky tok řízení.</p>
+<p>Již bylo řečeno, že před začátkem programování je vhodné nejprve přesně popsat nejen co řešíme, ale také jak to řešit (jedna z činností <a title="klikněte pro zobrazení odpovědi" href="http://algoritmizace.asp2.cz/algo/resources/2_diag/cojevydi.htm#null">zejména koho?</a>). Velmi srozumitelnou možností jak popsat, co bude počítač provádět, představuje vývojový diagram.</p>
+<p>Velmi častým problémem začínajících programátorů je právě skutečnost, že si nejprve dobře nerozmyslí, co vlastně chtějí řešit ani jak přesně bude program pracovat. Pokud je problém složitý, je velmi obtížné uvědomit si všechny souvislosti bez přesného zadání úlohy a kostry postupu řešení.</p>
+<p>Vývojový diagram je grafickým vyjádřením algoritmu. Jedná se o posloupnost geometrických obrazců, které jsou propojeny spojnicemi. Které obrazce to mohou být, popisuje následující stránka.</p>
+<h3>Používané značky</h3><p>
+<table border="1" cellspacing="0">
+<tbody>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zbeg.gif" alt="" /></td>
+<td>začátek algoritmu</td>
+</tr>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zend.gif" alt="" /></td>
+<td>konec algoritmu</td>
+</tr>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zpr.gif" alt="" /></td>
+<td>blok zpracování neboli příkazů<br />
+(do bloku zapisujeme akce, které se mají provést např. přiřazovací příkazy)</td>
+</tr>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zif.gif" alt="" /></td>
+<td>blok rozhodování<br />
+(do bloku zapisujeme podmínku)</td>
+</tr>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zio.gif" alt="" /></td>
+<td>blok vstupu nebo výstupu &#8211; zapisujeme sem příkazy vstupu nebo výstupu</td>
+</tr>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zfor.gif" alt="" /></td>
+<td>blok pro cyklus se známým počtem průchodů (opakování)</td>
+</tr>
+<tr>
+<td><img src="http://bech.mzf.cz/obr/zsp.gif" alt="" /></td>
+<td>spojka<br />
+(pro rozsáhlé diagramy, rozdělené do několika částí)</td>
+</tr>
+</tbody>
+</table></p>
+<p>Pomocí těchto značek se kreslí základní algoritmické konstrukce.</p>
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

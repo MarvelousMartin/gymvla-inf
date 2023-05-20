@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+ <style>
+ pre
+ {
+font-family:monospace;	 
+ }
+ </style>
+ 
+ <h2>Větvení v programu</h2>
+ 
+ <h3>Podmínka (condition)</h3>
+ <p>Je to logický výraz, jehož hodnotou je pravda nebo nepravda. Říkáme, že podmínka platí nebo neplatí.</p>
+<p><strong>Základní relační operátory</strong> jsou &lt;,&gt;,=,&lt;=,&gt;=,&lt;&gt;.<br />
+Ve výrazu lze použít proměnné, konstanty i kulaté závorky. Obecně v podmínce může být výraz vlevo i vpravo, navíc se dají sestavovat složené podmínky pomocí logických spojek. Toho si ale užijete až v konkrétním programovacím jazyce.<br />
+<strong>Sémantika je následující:</strong><br />
+Nejprve se vyhodnotí podmínka. Pokud platí, provede se příkaz (nebo více příkazů) uvedený ve větvi označené symbolem +. Pokud podmínka neplatí, provede se příkaz (nebo více příkazů) uvedený ve větvi označené symbolem -. Příkazem uvnitř může být přiřazovací příkaz, vstup nebo výstup dat i další podmíněný příkaz. V posledním případě mluvíme o složeném podmíněném příkazu nebo prostě o podmínce v podmínce. Jedna z větví v rozhodovacím bloku může být prázdná, neobsahuje žádný příkaz. Obvykle se jedná o větev označenou -. Takový podmíněný příkaz nazýváme neúplný. Úplný podmíněný příkaz má v každé větvi alespoň jeden příkaz.</p>
+<p><strong>Příklad několika podmínek:</strong><br />
+a=0<br />
+b&gt;=0<br />
+i=10<br />
+n&lt;100<br />
+s&gt;2*(i+j)<br />
+j&lt;&gt;0</p>
+<p>Nyní se podíváme na podmínky <strong>složené</strong> &#8211; ty vznikají z jednoduchých pomocí logických spojek.<br />
+Jednodušší <strong>podmínky</strong> pak ovšem musíme <strong>závorkovat</strong>!!!!<br />
+Tabulka logických spojek (jen těch nejjednodušších):</p>
+<p>Pro úplnost  i jejich český překlad (i když anglicky máte umět) : <strong>and </strong>= a současně, <strong>or</strong>=nebo.</p>
+<table width="420" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="120"><strong>Operátor</strong></td>
+<td width="300"><strong>Význam</strong></td>
+</tr>
+<tr>
+<td><strong>And</strong></td>
+<td>  Pokud platí obě podmínky</td>
+</tr>
+<tr>
+<td><strong>Or</strong></td>
+<td>  Pokud platí alespoň jedna podmínka</td>
+</tr>
+<tr>
+<td><strong>Xor</strong></td>
+<td>  Pokud platí pouze jedna podmínka</td>
+</tr>
+<tr>
+<td><strong>Not</strong></td>
+<td>  Pokud podmínka neplatí</td>
+</tr>
+</tbody>
+</table>
+<p>Příklad: </p>
+<p>var cislo: integer;<br />
+begin<br />
+cislo := 5;<br />
+if (cislo &gt;= 2) and (cislo &lt; 4) then write(&#8218;Ahoj&#8216;);<br />
+if not (cislo = 1) then write(&#8218;Cislo neni jedna&#8216;);<br />
+end.</p>
+<p>Jak vidíme, ahoj se nevypíše, protože podmínka splněna není. Pozor! Podmínky je nutné uzavírat do závorek, jinak by to bylo bráno jako bitová operace s čísly, ale tím se teď zabývat nebudu. Operátor not znamená negaci, tzn. že zápis &#8222;not (cislo = 1)&#8220; znamená to samé jako &#8222;<em>cislo &lt;&gt; 1</em>&#8222;. Podmínky lze utvářet i složitější a to pomocí závorek:</p>
+<p>var cislo: integer;<br />
+begin<br />
+cislo := 5;<br />
+if ((cislo &gt; 2) and (cislo &lt; 7)) or (cislo = 10) then write(&#8218;Ahoj&#8216;);<br />
+end.</p>
+<p>Ahoj se tedy vypíše, pokud je &#8222;cislo&#8220; větší než 2 a menší než 7, nebo je 10. </p>
+<h5><br />
+Postup při zpracování podmínky </h5>
+<p>Pro podmínky se v Pascalu používají klíčové příkazy <strong>IF</strong>, <strong>THEN</strong> a <strong>ELSE </strong>a<strong> CASE</strong>. Také se jim říká &#8222;příkazy větvení&#8220;. Seznámíme se s novým datovým typem a tím je <strong>boolean</strong>. Proměnné tohoto typu nabývají pouze dvou hodnot &#8211; true/false &#8211; pravda nebo nepravda. Příkaz IF taky nemusí mít else, potom se mu bude říkat &#8222;neúplný příkaz if&#8220;. Častá chyba : <strong>Před ELSE nesmí být středník</strong>.</p>
+<p>Když program narazí na příkaz IF, vyhodnotí <strong>booleovský výraz</strong> (to, co je za if). Pokud je výsledná hodnota true, program provede veškeré příkazy, které se nachází za THEN. Jestli je výsledná hodnota false (neplatí), tak provede příkazy za ELSE.</p>
+<p><strong>IF</strong> a&gt;b {to je booleovský výraz} <strong>THEN</strong> writeln(&#8218;a je větší než b&#8216;)<br />
+<strong>ELSE</strong> writeln(&#8218;a není větší než b&#8216;);</p>
+<p>Takže po tom, co program projede tuhle rozdvojku, tak vypíše buď : „a je větší než b“ nebo „a není větší než b“. Záleží na vyhodnocení výrazu.</p>
+<h3>Příklad pro použití if</h3>
+<p>Následující program seřadí uživatelem zadaná čísla podle velikosti.</p>
+<pre><strong>program</strong> serazeni;
+<strong>var</strong> a,b,c:integer;
+<strong>begin</strong>
+
+writeln('zadej 3cisla');
+readln(a,b,c);
+
+<strong>if</strong> (a&gt;=b) and (b&gt;=c) <strong>then</strong> writeln(a,' ',b,' ',c);
+
+<em>(* Jestliže uživatel zadal "a" větší, rovno "b" a zároveň b je větší, rovno "c", tak můžu v klidu vypsat čísla v tomto pořadí a-b-c následuje dalších 5 možností : *) </em>
+<strong>if</strong> (a&gt;=b) <strong>and</strong> (b&lt;=c) <strong>then</strong> writeln(a,' ',c,' ',b);
+<strong>if</strong> (b&gt;=a) <strong>and</strong> (a&gt;=c) <strong>then</strong> writeln(b,' ',a,' ',c);
+<strong>if</strong> (b&gt;=c) <strong>and</strong> (c&gt;=a) <strong>then</strong> writeln(b,' ',c,' ',a);
+<strong>if</strong> (c&gt;=a) <strong>and</strong> (a&gt;=c) <strong>then</strong> writeln(c,' ',a,' ',b);
+<strong>if</strong> (c&gt;=b) <strong>and</strong> (b&gt;=a) <strong>then</strong> writeln(c,' ',b,' ',a);
+
+readln;
+<strong>end.</strong></pre>
+<h3>Složitější podmínka</h3>
+<p>Tento způsob řeření se dá popsat jako taková podmínka v podmínce. Při splnění podmínky se provede další větvení atd. <strong>ELSE</strong> se vztahuje vždy k nejbližšímu <strong>THEN</strong>. Doporučuji, abyste si udělali tzv. Vývojový diagram, kde si graficky vyznačíte, jak program postupuje, když &#8222;prolézá&#8220; podmínkami. Při první podmínce se program vydá jedním nebo druhým směrem, pak narazí na další rozdvojku atd. Jeden směr znamená splnění podmínky a druhý představuje <strong>ELSE</strong>.</p>
+<pre><strong>program</strong> rychlejsi_serazeni;
+<strong>var</strong> a,b,c:integer;
+<strong>Begin</strong>
+
+writeln('zadej 3 přirozená čísla');
+readln(a,b,c);
+
+<strong>if</strong> a&gt;=b <strong>then if</strong> b&gt;=c <strong>then</strong> writeln(a,' ',b,' ',c)
+<strong>else if</strong> a&gt;b then writeln(c,' ',a,' ',b)
+<strong>else</strong> writeln(c,' ',a,' ',b)
+<strong>else if</strong> c&gt;b then writeln(c,' ',b,' ',a);
+<strong>else if</strong> a&gt;c then writeln (b,' ',a,' ',c)
+<strong>else</strong> writeln(b,' ',c,' ',a);
+
+readln;
+<strong>end.</strong></pre>
+<div id="vlevo">
+<h1>Příklady větvení programu</h1>
+<h3>Příkaz IF</h3>
+<p>Následující program určí řešení kvadratické rovnice. Zároveň provede diskusi na základě hodnot koeficientů a hodnoty diskriminantu, o jakou rovnici se jedná &#8211; Kvadratická s dvěma kořeny, dvojnásobným kořenem, lineární s nekonečně mnoho řešeními, s žádným řešením nebo s dvěma komplexními kořeny. Nyní už bude za<strong>THEN</strong> následovat více příkazů, např. vypsat informaci o řešení a zároveň provést další operaci, proto je nutné tyto příkazy uzavřít do <strong>begin</strong> a <strong>end</strong>.</p>
+<pre><strong>program</strong> rovnice;
+<strong>var</strong> a,b,c:integer;
+    reseni,diskr,reseni1,reseni2:real;
+<strong>begin</strong>
+
+writeln('zadej tri koeficienty kvadraticke rovnice');
+readln(a,b,c);
+
+<em>{ vypis rovnice: }</em>
+writeln('rovnice vypada takto: ',a,'x^2 + ',b,'x + ',c); 
+
+<strong>if</strong> (a=0) <strong>then</strong>
+   <strong>if</strong> (b=0) <strong>then</strong>
+    <strong>if</strong> (c=0) <strong>then</strong> writeln ('constantni fce - nekonecno reseni')
+    <em>{a,b,c je rovno nule}</em>
+   <strong>else</strong> writeln('konstantni fce nema reseni') <em>{pouze c ruzne od nuly}</em>
+<strong>else begin</strong> <em>{b,c ruzne od nuly - jedna se o linearni funkci}</em>
+  writeln('linearni fce');
+  reseni:=-(c/b);
+  writeln('reseni je: ',reseni);
+ <strong>end</strong>
+ <strong>else begin</strong> <em>{a,b,c ruzne od nuly}</em>
+   writeln('jedna se o kvadratickou fci');
+   diskr:=b*b-4*a*c; <em>{vypocet diskriminantu}</em>
+  <strong>if</strong> diskr &gt;=0 <strong>then begin</strong> <em>{diskriminant vetsi jak 0 tzn. 2 koreny}</em>
+reseni1:=-b+sqrt(diskr)/2*a;
+reseni2:=-b-sqrt(diskr)/2*a;
+writeln('resenim je ',reseni1,' a taky ',reseni2);
+<strong>end</strong>
+<strong>else begin</strong> <em>{diskriminant je zaporny - budou 2 komplexni koreny}</em>
+  writeln('je to komplexni rce');
+  diskr:=-diskr;
+  writeln('reseni 1 =', -b/(2*a),'+i*',sqrt(diskr)/(2*a));
+  writeln('reseni 1 =', -b/(2*a),'-i*',sqrt(diskr)/(2*a));
+<strong>end;</strong>
+<strong>end;</strong>
+
+readln;
+
+<strong>end.</strong></pre>
+<h3>Příkaz CASE</h3>
+<p>Case slouží k rozvětvení programu na několik částí, přičemž program využije jen jednu a ostatní přeskočí, popřípadě provede to, co uvedeme v příkazu <strong>ELSE</strong>. Struktura <strong>CASE</strong> je vidět na příkladu.</p>
+<pre><strong>program</strong> znamky;
+<strong>var</strong> znamka:integer;
+<strong>Begin</strong>
+
+writeln('zadej cislo: ');
+readln(znamka);
+
+<strong>Case</strong> znamka <strong>of</strong>
+  1 : writeln('vyborny');
+  2 : writeln('chvalitebny');
+  3 : writeln('dobry');
+  4 : writeln('dostatecny');
+  5 : writeln('nedostatecny');
+<strong>else</strong></pre>
+<pre>  writeln('neni znamka');</pre>
+<pre><strong>end;</strong>
+
+readln;
+<strong>end.</strong></pre>
+<p>Další příklad ukazuje, že konstanty, nemusejí být jen třeba jedno číslo, jako v předchozím příkladu (1,2,3..), ale také intervaly. Tento program určuje, jaký znak jste zadali.</p>
+<pre><strong>program</strong> znaky;
+<strong>var</strong> Z:char;
+<strong>Begin</strong>
+
+writeln('zadej znak: ');
+readln(znamka);
+
+<strong>Case</strong> Z <strong>of</strong>
+  'A'..'Z' : writeln(Z,' je velke pismeno');
+  'a'..'z' : writeln(Z,' je male pismeno');
+  '0'..'9' : writeln(Z,' je cislice');
+<strong>else</strong></pre>
+<pre>  writeln(Z,' je jiny znak');</pre>
+<pre><strong>end;</strong>
+
+readln;
+<strong>end.</strong></pre>
+
+</div><p>
+<table border="1" cellspacing="0">
+<tbody>
+<tr>
+<td><strong>Podmíněný příkaz</strong><br />
+umožňuje rozdělit program do 2 větví podle toho, zda je nebo není splněna podmínka</td>
+<td width="200"><img class="aligncenter" src="http://bech.mzf.cz/obr/akif.gif" alt="" width="146" height="191" /></td>
+<td><strong>Jestliže platí podmínka p,pak proveď příkaz p1, jinak proveď příkaz p2.</strong></td>
+
+</tr>
+<tr>
+<td><strong>Neúplný podmíněný příkaz</strong><br />
+umožňuje provést příkaz jenom tehdy, když je splněna podmínka</td>
+<td><img class="aligncenter" src="http://bech.mzf.cz/obr/akifpr.gif" alt="" width="112" height="180" /></td>
+<td><strong>Jestliže platí podmínka p,pak proveď příkaz p1.</strong></td>
+
+</tr>
+<tr>
+<td><strong>Vícenásobné větvení</strong><br />
+slouží k zadání vícenásobného větvení</td>
+<td><a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/Case.gif"><img class="aligncenter" title="Case" src="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/Case-194x300.gif" alt="case" width="194" height="300" /></a></td>
+<td><strong>Jestliže výraz je roven konstanta1, proveď příkaz1, jestliže výraz je roven konstanta2, proveď příkaz2,…, jestliže výraz je roven konstantaN, proveď příkazN, jinak proveď příkaz.<br />
+</strong></td>
+
+</tr>
+</tbody>
+</table></p>
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

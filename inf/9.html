@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<h2>Rastrová grafika</h2>
+<ul>
+<li><strong>Princip</strong>
+<ul>
+<li>rastrový obraz je tvořen barevnými body uspořádanými do mřížky &#8211; rastru</li>
+<li>každý bod v zobrazení nese informaci o své poloze a barvě (bitmapa)</li>
+</ul>
+</li>
+<li><strong>Využití</strong> &#8211; digitalizace obrazu při skenování, digitální fotografie</li>
+<li><strong>Parametry</strong>
+<ul>
+<li><strong>rozlišení</strong> &#8211; kvalita zobrazení detailů, počet uložených bodů na jednotku délky DPI (Dot Per Inches)
+<ul>
+<li>70-100 DPI &#8211; zobrazení na monitoru, 300-500 DPI &#8211; skenování a tisk, &gt;800 DPI &#8211; profi grafika</li>
+</ul>
+</li>
+<li><strong>barevná hloubka</strong> &#8211; věrnost barev, počet bitů použitých k zakódování informace o barvě obrazového bodu
+<ul>
+<li>8 bitů = 256 odstínů, 16 bitů = 65.536 odstínů (high color), 24 bitů = 16,7 mil. odstínů (true color)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Formáty</strong>
+<ul>
+<li><strong>BMP</strong> &#8211; základní formát, uložení pixelů bez komprese, barevná hloubka 1, 4, 8, 16, 24 bit</li>
+<li><strong>JPEG</strong> &#8211; nejrozšířenější formát, využití ztrátové komprese, barevná nejčastěji 24 bitů</li>
+<li><strong>GIF</strong> &#8211; bezeztrátová komprese, max. barevná hloubka 8 bit, podpora průhledné barvy, podpora animace</li>
+<li><strong>PNG</strong>&#8211; moderní formát, sloučení výhod GIF a JPG, průhlednost, efektivní bezeztrátová komprese</li>
+<li>odkaz na grafické formáty podrobně: <a title="grafické formáty" href="http://gimp.comuv.com/kurs_formats.php">http://gimp.comuv.com/kurs_formats.php</a></li>
+</ul>
+</li>
+<li><strong>Úpravy</strong> &#8211; ořez, natočení, rozlišení, barevná hloubka, sytost, kontrast, jas &#8230;</li>
+<li><strong>Dávková konverze a přejmenování</strong> &#8211; XnView</li>
+<li><strong>Software</strong> &#8211; Gimp, XnView, Google Picasa, PhotoFiltre, Zoner Photo Studio, Corel PhotoPaint, Adobe PhotoShop</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Nevýhody bitmapové grafiky</h3>
+<ul>
+<li>velké nároky na zdroje (při vysokém rozlišení a barevné hloubce velikost obrázku dosahuje i jednotek megabytů, v profesionální grafice se běžně operuje i s podklady o desítkách megabytů)</li>
+<li>změna velikosti (zvětšování nebo zmenšování) vede ke zhoršení obrazové kvality obrázku</li>
+<li>zvětšování obrázku je možné jen v omezené míře, neboť při větším zvětšení je na výsledném obrázku patrný <strong>rastr</strong></li>
+</ul>
+<h3>Výhody bitmapové grafiky</h3>
+<ul>
+<li>pořízení obrázku je velmi snadné například pomocí <a title="Fotografie" href="http://cs.wikipedia.org/wiki/Fotografie">fotografie</a> nebo pomocí <a title="Skener" href="http://cs.wikipedia.org/wiki/Skener">skeneru</a>.</li>
+</ul>
+<h3>Formáty</h3>
+<p>Používané <a title="Formát souboru" href="http://cs.wikipedia.org/wiki/Form%C3%A1t_souboru">formáty souborů</a> rozlišujeme jako nekomprimované a komprimované, komprimované pak na formáty s <a title="Bezeztrátová komprese" href="http://cs.wikipedia.org/wiki/Bezeztr%C3%A1tov%C3%A1_komprese">bezeztrátovou</a> či <a title="Ztrátová komprese" href="http://cs.wikipedia.org/wiki/Ztr%C3%A1tov%C3%A1_komprese">ztrátovou kompresí</a>:</p>
+<ul>
+<li><a title="APNG" href="http://cs.wikipedia.org/wiki/APNG">APNG</a></li>
+<li><a title="BMP" href="http://cs.wikipedia.org/wiki/BMP">BMP</a></li>
+<li><a title="GIF" href="http://cs.wikipedia.org/wiki/GIF">GIF</a></li>
+<li><a title="HD Photo" href="http://cs.wikipedia.org/wiki/HD_Photo">HDP</a></li>
+<li><a title="JPEG" href="http://cs.wikipedia.org/wiki/JPEG">JPEG</a></li>
+<li><a title="JPEG 2000" href="http://cs.wikipedia.org/wiki/JPEG_2000">JPEG 2000</a></li>
+<li><a title="Multiple-image Network Graphics" href="http://cs.wikipedia.org/wiki/Multiple-image_Network_Graphics">MNG</a></li>
+<li><a title="PC Paintbrush File Format" href="http://cs.wikipedia.org/wiki/PC_Paintbrush_File_Format">PCX</a></li>
+<li><a title="Portable Network Graphics" href="http://cs.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a></li>
+<li><a title="TIFF" href="http://cs.wikipedia.org/wiki/TIFF">TIFF</a></li>
+<li><a title="Wireless Application Protocol Bitmap Format" href="http://cs.wikipedia.org/wiki/Wireless_Application_Protocol_Bitmap_Format">WBMP</a></li>
+<li><a title="X PixMap" href="http://cs.wikipedia.org/wiki/X_PixMap">XPM</a></li>
+</ul>
+
+<h3>Gimp - tipy</h3>
+<ul>
+<li><strong>Vložení</strong> - Soubor &gt; Vytvořit (schránka, screenshot)</li>
+<li><strong>Vrstvy</strong> - CTRL + L (Layer)
+<ul>
+<li>změna názvu - dvojklik</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Přechodová výplň</strong> - nástroj “mísení”</p>
+<ul>
+<li>krytí (průhlednost) - až po ukotvení vstvy</li>
+</ul>
+</li>
+<li>
+<p><strong>Zrušení výběru</strong> - CTRL+  SHIFT + A</p>
+<ul>
+<li>inverze výběru - CTRL + I</li>
+<li>výběr po vystřihnutí - klik dovnitřS</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Plechovka</strong> - celý výběr / podobné barvy</li>
+<li><strong>Škálování</strong> - změna velikost</li>
+</ul>
+<ul>
+<li><strong>Červené oči</strong> - Filtry &gt; Vylepšit</li>
+</ul>
+
+<h3>Gimp (pdf soubory):</h3>
+<ol>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_01.pdf">Stažení a instalace</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_02.pdf">Uživatelské rozhraní</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_03.pdf">Získání a uložení obrázku</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_04.pdf">Lupa, pohledy a další zobrazení</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_05.pdf">Ořez, měření vzdáleností a úhlů</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_06.pdf">Práce s výběry, základní druhy výběrů, úpravy a uložení výběrů</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_07.pdf">Práce s výběrem podle barvy, inverze výběru</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_08.pdf">Inteligentní nůžky </a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_09.pdf">Bézierův výběr (Vytvořit a upravit cesty)</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_10.pdf">Kreslící nástroje</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_11.pdf">Nástroje pro retuš</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_12.pdf">Transformace obrazu</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_13.pdf">Vrstvy</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_14.pdf">Práce s textem</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_15.pdf">Maska</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_16.pdf">Úprava barev, kapátko, odstranění červených očí</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_17.pdf">Histogram</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_18.pdf">Filtry</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/11/2_1_INF_19.pdf">Animace</a></li>
+<li>lekce: <a href="http://www.ivt.mzf.cz/wp-content/uploads/2012/09/2_1_INF_20.pdf">Tvorba koláže</a></li>
+</ol>
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

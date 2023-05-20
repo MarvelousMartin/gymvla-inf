@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<h2>Internet</h2>
+
+<h3>Vlastnosti Internetu</h3>
+<ul>
+<li>Celosvětová&nbsp;<a id="j6dc2aef0333fe7a07" href="http://dynamicit.cz/sprava-siti-v-brne">počítačová síť</a></li>
+<li>Jádro tvoří <a id="ofa32efcd0eeb219d2085450377feedf2" href="http://dynamicit.cz/server-hosting/">servery</a> komunikačních firem propojené rychlými propustnými spoji</li>
+<li>K jádru se připojují uživatelé využívající služeb <a id="ofa32efcd0eeb219d2085450377feedf2" href="http://dynamicit.cz/server-hosting/">serverů</a></li>
+<li>Komunikace probíhá podle jednotných pravidel – protokolu TCP/IP
+<div>&#8211; Národní akademická síť&nbsp;<a href="http://www.cesnet.cz/provoz/" target="_blank" rel="nofollow"><strong>CESNET2</strong></a></div>
+<div>&#8211; Evropská síť&nbsp;<a href="http://www.cesnet.cz/provoz/geant.html" target="_blank" rel="nofollow"><strong>GÉANT2</strong></a></div>
+<div>&#8211; Americká akademická síť&nbsp;<a href="http://abilene.internet2.edu/" target="_blank" rel="nofollow"><strong>INTERNET2</strong></a></div>
+</li>
+</ul>
+<h3>Historie Internetu</h3>
+<ul>
+<li>1970 – experimentální síť ARPANET – 50 PC, protokol NCP</li>
+<li>1980 – testování komunikačního protokolu TCP/IP</li>
+<li>1987 – vznik pojmu INTERNET – propojeno 27.000 PC</li>
+<li>1992 – 1 milion uživatelů</li>
+<li>1994 – počátky služby WWW a vznik prvních prohlížečů – Netscape Navigator</li>
+<li>1998 – 100 milionů uživatelů</li>
+<li>2002 – 500 milionů uživatelů</li>
+<li>2006 – 1000 milionů uživatelů</li>
+<li>2012 – 2,27 miliardy uživatelů</li>
+<li>2016 – víc než 3,2 miliardy uživatelů</li>
+</ul>
+<h3>Architektura sítí – vrstvy a protokoly</h3>
+<ul>
+<li><big>Vrstvový princip sítí</big>
+<div><strong>Aplikační vrstva</strong>&nbsp;&#8211; provoz síťových aplikací – služeb</div>
+<div><strong>Transportní vrstva</strong>&nbsp;&#8211; přenos dat mezi zdrojem a cílem</div>
+<div><strong>Síťová vrstva</strong>&nbsp;&#8211; adresaci a směrování dat</div>
+<div><strong>Hardwarová vrstva</strong>&nbsp;&#8211; parametry&nbsp;<a id="iaca6d26da" href="http://www.ploty-betafence.cz/produkty/sloupky/sloupky-s-obdelnikovym-prurezem-nylofor-typ-1">el</a>. signálu</div>
+</li>
+<li><big>Protokol TCP/IP</big>&nbsp;&#8211;&nbsp;<strong>T</strong>ransmission&nbsp;<strong>C</strong>ontrol&nbsp;<strong>P</strong>rotocol /&nbsp;<strong>I</strong>nternet&nbsp;<strong>P</strong>rotocol
+<ul>
+<li>skupina pravidel pro komunikaci v sítích</li>
+<li>každá vrsta pracuje podle specifických pravidel</li>
+</ul>
+<div><img title="" src="http://info.spsnome.cz/uploads/Komunikace/site06.jpg" alt=""></div>
+</li>
+<li><big>Schema přenosu dat</big>
+<div><img title="" src="http://info.spsnome.cz/uploads/Komunikace/site07.jpg" alt=""></div>
+</li>
+</ul>
+<div>&nbsp;</div>
+<h3>Adresy uzlů sítě</h3>
+<ul>
+<ul>
+<li><strong>MAC</strong>&nbsp;adresa&nbsp;&#8211; Medium Acces Control</li>
+</ul>
+</ul>
+<p>fyzická adresa PC daná výrobcem adaptéru, 48 bitů – 6 x 8 bit hexadecimální prezentace&nbsp;00-0A-48-0A-E5-44<br />
+Start -cmd -&gt; ipconfig /all</p>
+<ul>
+<ul>
+<li><strong>IP</strong>adresa&nbsp;&#8211;&nbsp;&nbsp;IPv4</li>
+</ul>
+</ul>
+<p>logická adresa PC daná administrátorem, 32(128) bitů – 4 x 8 bit<br />
+číselná prezentace&nbsp;202.195.82.164<br />
+Start -&gt; Spustit -&gt; cmd -&gt; tracert server</p>
+<h5><strong>Druhy IP adres</strong></h5>
+<ol>
+<li><em>Dynamická IP adresa</em>&nbsp;je měnná IP adresa, poskytovatel připojení k internetu přiděluje svým zákazníkům IP adresy dynamicky, což znamená, že se při restartu počítače nebo modemu tato IP adresa mění – je odlišná. Dynamická IP adresa je považována za podstatně bezpečnější než statická IP adresa, protože je při každém připojení k internetu odlišná, čímž se podstatně eliminuje počet hackerských útoků na počítač</li>
+<li><em>Statická IP adresa</em>&nbsp;je pevná, unikátní IP adresa, pod kterou vystupuje na internetu pouze jediný počítač. Velkým záporem statické IP adresy je to, že je považována za méně&nbsp;<a href="http://czblog.cz/provoz-kazdeho-mobilu-je-archivovan-hovory-i-sms-zpravy-narizuje-to-totiz-zakon/">bezpečnou</a>, protože dochází k přímé, stálé identifikaci majitelele počítače a tím pádem dochází k častým hackerským útokům na počítač. Pro hackeři je totiž IP adresa velice relevantní prvek, protože touto IP adresou identifikují oběť, respektive její počítač, pokud má oběť statickou – stálou IP adresu, tak je to živná půda pro hackera – kdykoliv se může připojit na počítač oběti.</li>
+</ol>
+<div>pokud se načítá IP adresa automaticky z&nbsp;<strong>DHCP (<a id="z4e243fdda2bda2be2e10c343b3f58d5c" href="http://dynamic-preklady.cz/">Dynamic</a> Host Configuration Protocol – automatické přidělování IP adres)</strong>&nbsp;, tak to ještě vůbec nemusí znamenat, že vám váš poskytovatel připojení k internetu přiděluje dynamickou IP adresu. Bývá to tak, že z DHCP se načítá stejná IP adresa pro konkrétní počítač, pro který je relevantní jeho MAC adresa.</div>
+<p><strong>Přístupnost – identifikaci IP adres na internetu určují dva druhy IP adres:</strong></p>
+<ol>
+<ol>
+<li><em>Veřejná (vnější, externí) IP adresa</em></li>
+</ol>
+</ol>
+<p>je jedinečná IP adresa (tuto IP adresu může vlastnit pouze jeden uživatel), která je v síti internet (nebo domácí síti) viditelná, proto je považována za méně bezpečnou, protože je zde větší riziko hackerských útoků atp. .</p>
+<ol>
+<ol>
+<li><em>Neveřejná (vnitřní, interní) IP adresa</em></li>
+</ol>
+</ol>
+<p>znamená, že váš počítač není síti internet neviditelný a sdílí veřejnou IP adresu s ostatními uživateli sítě poskytovatele připojení k internetu, proto je považována za bezpečnější. Za neveřejnou IP adresu lze považovat např. IP adresu schovanou za anonymním proxy <a id="ofa32efcd0eeb219d2085450377feedf2" href="http://dynamicit.cz/server-hosting/">serverem</a>.</p>
+<div>
+<p>Adresy 127.x.x.x (tzv.&nbsp;<em><a title="Localhost" href="http://cs.wikipedia.org/wiki/Localhost">localhost</a></em>, nejčastěji se používá adresa 127.0.0.1) jsou rezervovány pro tzv.&nbsp;<a title="Loopback" href="http://cs.wikipedia.org/wiki/Loopback">loopback</a>, logickou smyčku umožňující posílat pakety sám sobě.</p>
+<p>Dále jsou vyčleněny&nbsp;<strong>rozsahy tzv. interních (neveřejných) IP adres (tzv.&nbsp;<em>privátní IP adresy</em>)</strong>, které se používají pouze pro adresování vnitřních sítí (např. lokálních), na Internetu se nikdy nemohou objevit. Jako neveřejné jsou určeny adresy:</p>
+<ul>
+<li>ve třídě A: 10.0.0.0 až 10.255.255.255 (celkem 1krát 16&nbsp;777&nbsp;216 adres; tj. 16&nbsp;777&nbsp;216 adres, z nichž je použitelných jen 16&nbsp;777&nbsp;214)</li>
+<li>ve třídě B: 172.16.0.0 až 172.31.255.255 (celkem 16krát 65&nbsp;536 adres; tj. 1&nbsp;048&nbsp;576 adres, z nichž je použitelných jen 1&nbsp;048&nbsp;544)</li>
+<li>ve třídě C: 192.168.0.0 až 192.168.255.255 (celkem 256krát 256 adres; tj. 65&nbsp;536 adres, z nichž je použitelných jen 65&nbsp;024)</li>
+</ul>
+</div>
+<ul>
+<li><big><strong>DN</strong>&nbsp;adresa</big>&nbsp;&#8211; Domain Name – doménová adresa např.&nbsp;<a href="http://www.gymvla.cz/">http://www.gymvla.cz</a></li>
+<li><big><strong>DNS</strong>&nbsp;server</big>&nbsp;&#8211; převádí Domain Name na IP adresu a naopak</li>
+</ul>
+<h3>Připojení k Internetu</h3>
+<h5>Telefonní linka</h5>
+<ul>
+<li>Vytáčené připojení</li>
+<li>&#8211; dnes již zastaralé – max. 56 kb/s, blokovaná stavice</li>
+</ul>
+
+
+<h5>ADSL</h5>
+
+
+<p>digitální telefonní přípojka s dvěma kanálydostupné a rozšířené, vysoké rychlosti od 2 do 25 Mbit/s<br />
+<strong>ADSL</strong>&nbsp;(<a title="Angličtina" href="http://cs.wikipedia.org/wiki/Angli%C4%8Dtina">anglicky</a>&nbsp;<strong>Asymmetric Digital Subscriber Line</strong>) je v současnosti nejčastěji využívaný typ&nbsp;<a title="Digital Subscriber Line" href="http://cs.wikipedia.org/wiki/Digital_Subscriber_Line">DSL</a><sup>[<a title="Wikipedie:Ověřitelnost" href="http://cs.wikipedia.org/wiki/Wikipedie:Ov%C4%9B%C5%99itelnost">zdroj?</a>]</sup>. Vyznačuje se asymetrickým připojením, kdy je rychlost dat přenášených k uživateli (<a title="Angličtina" href="http://cs.wikipedia.org/wiki/Angli%C4%8Dtina">anglicky</a>&nbsp;<em>download</em>) vyšší, než rychlost dat odcházejících od uživatele směrem do&nbsp;<a title="Internet" href="http://cs.wikipedia.org/wiki/Internet">Internetu</a>&nbsp;(<a title="Angličtina" href="http://cs.wikipedia.org/wiki/Angli%C4%8Dtina">anglicky</a>&nbsp;<em>upload</em>). Asymetrie naprosté většině uživatelů vyhovuje, protože odpovídá jejich běžným potřebám. Na druhou stranu může bránit rozvoji&nbsp;<a title="Web 2.0" href="http://cs.wikipedia.org/wiki/Web_2.0">Webu 2.0</a>&nbsp;nebo&nbsp;<a title="Videotelefon" href="http://cs.wikipedia.org/wiki/Videotelefon">videotelefonování</a>, kde je nutné přenášet více dat oběma směry.</p>
+
+
+<h5>VDSL</h5>
+
+
+<p><strong>VDSL</strong>&nbsp;nebo&nbsp;<strong>VHDSL</strong>&nbsp;(<a title="Angličtina" href="http://cs.wikipedia.org/wiki/Angli%C4%8Dtina">anglicky</a>&nbsp;Very High Speed DSL) je&nbsp;<a title="Digital Subscriber Line" href="http://cs.wikipedia.org/wiki/Digital_Subscriber_Line">DSL technologie</a>&nbsp;umožňující rychlejší datový přenos přes existující telefonní vedení (plochý nekroucený kabel nebo&nbsp;<a title="Kroucená dvojlinka" href="http://cs.wikipedia.org/wiki/Kroucen%C3%A1_dvojlinka">kroucená dvojlinka</a>), což zjednodušuje její nasazení, protože není nutné pokládat nové kabely.&nbsp;Druhá generace VDSL2 (<a title="ITU-T G.993.2 (stránka neexistuje)" href="http://cs.wikipedia.org/w/index.php?title=ITU-T_G.993.2&amp;action=edit&amp;redlink=1">ITU-T G.993.2</a>) využívá šířky pásma až do 30&nbsp;<a title="Hertz" href="http://cs.wikipedia.org/wiki/Hertz">MHz</a>, což zajišťuje velmi vysokou&nbsp;<a title="Přenosová rychlost" href="http://cs.wikipedia.org/wiki/P%C5%99enosov%C3%A1_rychlost">přenosovou rychlost</a>&nbsp;až 100&nbsp;<a title="Bit za sekundu" href="http://cs.wikipedia.org/wiki/Bit_za_sekundu">Mbit/s</a>&nbsp;současně v obou směrech. Ovšem tato maximální přenosová rychlost je dosažitelná při délce vedení maximálně do 300&nbsp;<a title="Metr" href="http://cs.wikipedia.org/wiki/Metr">metrů</a>. S delším vedením nebo jeho nižší kvalitou se přenosová rychlost snižuje.</p>
+<div>
+<h5>Bezdrátové (WiFi) připojení</h5>
+<p>– dnes značně rozšířené a levné</p>
+<div>– vyšší pořizovací náklady, přímá viditelnost, omezený dosah, závislost na počasí</div>
+<div>– dva základní standardy – <strong>2,4</strong> (standardy <strong>802.11b/g/n</strong>) a <strong>5,0 GHz</strong> (standardy <strong>802.11a/n</strong>)</div>
+<div>Bezdrátová Wi-Fi síť může pracovat na několika standardech IEEE, které postupně vznikaly od roku 1997, kdy přišel základní 802.11 s datovou propustností maximálně 2 Mb/s (reálně 120 kB/s). O dva roky později byly schváleny standardy <strong>802.11a (5 GHz, maximálně 54 Mb/s</strong>, reálně 3,1 MB/s) a <strong>802.11b (2,4 GHz, maximálně 11 Mb/s</strong>, reálně 700 kB/s). Až standard <strong>802.11g</strong> přinesl v roce<strong> 2003</strong> rychlost <strong>54 Mb/s i do 2,4GHz</strong> pásma, a Wi-Fi síť se tak stala jak cenově dostupnou, tak i použitelnou pro plnohodnotné surfování.</div>
+<div><strong>Maximální reálná rychlost přenosu dat je u 802.11g</strong> přibližně 3,1 MB/s (<strong>25 Mb/s</strong>). Skutečně vysoké rychlosti přenosu ale přinesl standard <strong>802.11n v roce 2009</strong> s maximální fyzickou rychlostí <strong>600 Mb/s</strong> (reálně až 25 MB/s).</div>
+<div>&nbsp;<strong>Kabelová televize</strong></div>
+<p>– využití stávajících rozvodů ve velkých městech, vysoké rychlosti</p>
+<div>&nbsp;<strong>Síť mobilních telefonů</strong></div>
+<p>– využití sítě GSM, zatím drahé, max. rychlost 1-2Mbit/s</p>
+<div>– vhodné pro připojení nootebooků</div>
+<div>&nbsp;<strong>Satelitní síť</strong></div>
+<p>– pro běžné uživatele zatím drahé, vysoká rychlost 10 Gbit/s</p>
+<div>– využití v neobydlených a nepřístupných oblastech</div>
+</div>
+<p>&nbsp;</p>
+<h3>Služby Internetu</h3>
+<ul>
+<ol>
+<li><big>Elektronická pošta</big>
+<ul>
+<li><strong>SMTP</strong>&nbsp;-Simple Mail Transfer Protocol (zkratka SMTP) je internetový protokol určený pro přenos zpráv elektronické pošty (e-mailů) mezi přepravci elektronické pošty (MTA). Protokol zajišťuje doručení pošty pomocí přímého spojení mezi odesílatelem a adresátem; zpráva je doručena do tzv. poštovní schránky adresáta, ke které potom může uživatel kdykoli (off-line) přistupovat (vybírat zprávy) pomocí protokolů POP3 nebo IMAP.</li>
+<li><strong>POP3</strong>&nbsp;(Post Office Protocol) je internetový protokol, který se používá pro stahování emailových zpráv ze vzdáleného serveru na klienta (vlastní počítač).</li>
+<li><strong>IMAP</strong>&nbsp;(Internet Message Access Protocol) je internetový protokol pro vzdálený přístup k e-mailové schránce. Na rozdíl od protokolu POP3 umí IMAP pracovat v tzv. on-line i off-line režimu a nabízí pokročilé možnosti vzdálené správy (práce se složkami, přesouvání zpráv, prohledávání na straně serveru a podobně). V současné době se používá protokol IMAP4 (IMAP version 4 revision 1 – IMAP4rev1), který je definován v RFC 3501.</li>
+</ul>
+</li>
+<li><big>Vyhledávání a zobrazení informací</big>&nbsp;&#8211;<strong>&nbsp;HTTP</strong>&nbsp;(Hypertext Transfer Protocol) je internetový protokol určený pro výměnu hypertextových dokumentů ve formátu HTML (HTTPS – zabezpečený protokol). Používá obvykle port TCP/80, verze 1.1 protokolu je definována v RFC 2616. Tento protokol je spolu s elektronickou poštou tím nejvíce používaným a zasloužil se o obrovský rozmach internetu v posledních letech.</li>
+<li><big>Přenos souborů</big>&nbsp;&#8211;&nbsp;<strong>FTP</strong>&nbsp;(anglicky File Transfer Protocol) je v informatice protokol pro přenos souborů mezi počítači pomocí&nbsp;<a id="xc1fc6f27de7e82eeb396dc2aef0333fe7a07" href="http://dynamicit.cz/sprava-siti-v-brne">počítačové sítě</a>. Využívá protokol TCP z&nbsp;<a id="c50278cf1c531" href="http://www.kafe.cz/rodina-a-domov/deti-a-rodina/">rodiny</a>&nbsp;TCP/IP a může být používán nezávisle na použitém operačním systému (je platformně nezávislý). Definován byl v roce 1985 v RFC 959 a rozšířen byl v roce 1997 v RFC 2228. Jeho podpora je součástí webových prohlížečů nebo specializovaných programů (tzv. FTP klientů).</li>
+<li><big>Vzdálený přístup</big>&nbsp;&#8211;<strong>&nbsp;Telnet</strong>(zkratka z Telecommunication Network) je v informatice označení protokolu používaném v počítačových sítích, který pomocí stejnojmenné aplikace umožňuje uživateli připojení ke vzdálenému počítači.
+<div>telnet://anonym@anezka.vc.cvut.cz – login : visitor</div>
+</li>
+</ol>
+</ul>
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

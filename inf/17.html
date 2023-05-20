@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<style>
+ pre
+ {
+font-family:monospace;
+}
+ </style>
+ 
+<h2>Příkazy cyklu</h2>
+<p>Cykly slouží k vícenásobnému opakování stejné části programu a mají v programování široké využití. Rozlišují se 3 základní typy cyklů:</p>
+<ol>
+<li>s pevným počtem opakování</li>
+<li>s podmínkou na začátku</li>
+<li>s podmínkou na konci</li>
+</ol>
+<h3>Cyklus FOR</h3>
+<p>Cyklus for má pevný počet opakování a provede se vždy tolikrát, jak určuje rozsah řídící proměnné. Jeho syntax je následující: <strong>For</strong> i:=1 <strong>to</strong> 10 <strong>Do</strong> {příkaz}, kde „i“ se nazývá řídící proměnná. Ta se po vykonání příkazu zvýší o jedničku dokud nedosáhne konečné hodnoty – v tomto případě 10. Takže tento cyklus se provede desetkrát a proměnná i nabývá postupně hodnot 1 až 10. Místo klíčového slova <strong>to</strong>lze použít i odpočítávání <strong>downto</strong> – pak ale musí mít řídíci proměnná vyšší hodnotu než ta koncová… Pro lepší pochopení cyklu FOR tu jsou dva příklady.</p>
+<pre><strong>program</strong> cyklus1;
+<strong>var</strong> i:integer <em>{řídící proměnná je číslo}</em>
+
+<strong>begin</strong>
+ <strong>for</strong> i:=1 <strong>to</strong> 10 <strong>do</strong> writeln(i,'. ahoj');
+
+readln;
+<strong>end.</strong></pre>
+<p>Program provede příkaz writeln &#8211; vypíše „ahoj“ , vrátí se na začítek cyklu, zvýší hodnotu „i“ a opět provede příkaz. Abyste se přesvědčili, že se hodnota zvyšuje, tak jsem do writeln ještě nechal vypsat aktuální hodnotu „i“. Takže u každého ahoj bude ještě číslo. Následující program bude sčítat 10 čísel, které zadáme.</p>
+<pre><strong>program</strong> scitani;
+<strong>var</strong> pocet,cislo,soucet:integer;
+<strong>begin</strong>
+
+soucet:=0 <em>{Vynuluje se proměnná součet}</em>
+<strong>for</strong> pocet:=1 <strong>to</strong> 10 <strong>do</strong>
+<strong>begin</strong>
+ read(cislo);
+ soucet:=soucet+cislo;
+<strong>end;</strong>
+readln;
+
+writeln(soucet);
+
+readln;
+<strong>end.</strong></pre>
+<h3>Cyklus WHILE</h3>
+<p>Cyklus While má podmínku na začátku, takže v případě, že není splněna, cyklus se vůbec neprovede.<br />
+Syntax je následující: <strong>While</strong> {výraz (např. a&lt;100)} <strong>Do</strong> {příkaz}. Jako příklad je zde program, který vypíše všechny mocniny čísel 1 až 100.</p>
+<pre><strong>program</strong> Mocniny;
+<strong>var</strong> x:integer;
+
+<strong>begin</strong>
+
+x:=0;
+<strong>while</strong> x&lt;100 <strong>do</strong>
+<strong>begin</strong>
+ x:=x+1;
+writeln(x,' ',sqr(x),' ',sqr(x)*x);
+<strong>end;</strong>
+
+readln;
+<strong>end.</strong></pre>
+<p>Proměnná má zde velký význam, protože v určitém okamžiku její hodnota zajistí ukončení cyklu. Na počátku je 0 a uvnitř cyklu se zvedá o 1.</p>
+<h3>Cyklus REPEAT UNTIL</h3>
+<p>Počet opakování cyklu repeat je určen podmínkou vyhodnocenou po příkazu, který se má provést. Syntax: <strong>Repeat</strong> {příkazy} <strong>Until</strong> {podmínka pro pokračování}.<br />
+Postup při zpracování tohoto cyklu:</p>
+<ol>
+<li>Provedou se příkazy mezi klíčovými slovy <strong>Repeat</strong> a <strong>Until</strong></li>
+<li>Vyhodnotí se booleovský výraz na konci</li>
+<li>je-li hodnota NEpravdivá, opakuje se provedení příkazu</li>
+</ol>
+<p>Všiměte si, že u cyklu <strong>WHILE</strong> je to přesně naopak. Jinými slovy jeden cyklus je negací toho druhého. Můžete si pomoct českými ekvivalenty:<br />
+<strong>Cyklus While:</strong> <em>Když (něco je menší atd.) prováděj tohle a tamto</em>.<br />
+<strong>Cyklus Repeat:</strong><em> Prováděj tohle a tamto, dokud (něco není menší atd…)</em> Rozdíl je v tom, že jeden z těchto cyklů proběhne vždy alespoň jednou a to ten, který má podmínku na konci. Cyklus Repeat nyní použijeme v programu, který hledá největší společné dělitele dvou čísel postupným odčítáním. Na tento způsob přišel kdysi pan Eukleides a podle něho se nazývá „Eukleidův algorytmus“. V podstatě se jedná o to, že máme dvě čísla – jedno větší a druhé menší. Budeme neustále odčítat menší od většího, dokud se tato čísla nebudou rovnat. Už když je použito slovo „dokud“, úplně se nabízí cyklus <strong>Repeat until</strong>.</p>
+<pre><strong>program</strong> Deleni;
+<strong>var</strong> j,i:integer;
+<strong>begin</strong>
+
+writeln('zadej 2 cisla');
+readln(i,j);
+
+<strong>repeat</strong>
+ <strong>begin</strong>
+  <strong>if</strong> i&gt;j <strong>then</strong> i:=i-j <strong>else</strong> j:=j-i;
+ <strong>end;</strong>
+<strong>until</strong> i=j;
+
+writeln(i);
+
+readln;
+<strong>end.</strong></pre>
+<p>&nbsp;</p>
+<table border="1" cellspacing="0">
+<tbody>
+<tr>
+<td><strong>Cyklus s podmínkou na začátku</strong><br />
+Když podmínka není na počátku splněna, cyklus nemusí proběhnout ani jednou.</td>
+<td width="200"><img src="http://bech.mzf.cz/obr/akwh.gif" alt="" /></td>
+<td><strong>Zatímco platí podmínka p, prováděj příkaz p1.</strong>
+<pre>
+while p do p1;
+</pre></td>
+
+
+
+</tr>
+<tr>
+<td><strong>Cyklus s podmínkou na konci</strong><br />
+Tento cyklus musí proběhnout aspoň jednou.</td>
+<td><img src="http://bech.mzf.cz/obr/akrep.gif" alt="" /></td>
+<td><strong>Opakuj příkaz p1, dokud neplatí podmínka p.</strong>
+<pre>
+repeat
+  p1;
+until p;
+</pre></td>
+
+</tr>
+<tr>
+<td><strong>Cyklus se známým počtem průchodů (s řídící proměnnou)</strong><br />
+Cyklus proběhne n krát<br />
+v obecném případě (pro i od m do n) proběhne (n-m+1) krát<br />
+pokud m&gt;n tak neproběhne ani jednou.<br />
+<strong>i</strong> je řídící proměnná – musí být celočíselná!</td>
+<td><img src="http://bech.mzf.cz/obr/akfor.gif" alt="" /></td>
+<td><strong>pro i od 1 do n prováděj příkaz p1.</strong><br />
+během provádění cyklu řídící proměnná cyklu <strong>i</strong> postupně nabývá hodnot 1, 2, 3,…,n.
+<pre>for i:=1 to n</pre>
+<pre>do p1;</pre>
+</td>
+
+</tr>
+</tbody>
+</table>
+<p>pozn.: <em>Vývojové diagramy cyklů mají jako jediné zpětnou větev. Standartní chybou u opakování s podmínkou bývá cyklus „s podmínkou uprostřed“. Zpětná větev musí buď začínat hned za podmínkou, nebo se musí vracet těsně před podmínku.</em></p>
+	</div>
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

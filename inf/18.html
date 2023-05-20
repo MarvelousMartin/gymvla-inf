@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<style>
+ pre
+ {
+font-family:monospace;
+}	 
+
+ </style>
+ 
+ <h2>Pascal</h2>
+ 
+ <p><strong>Pascal</strong> je název <a title="Programovací jazyk" href="http://cs.wikipedia.org/wiki/Programovac%C3%AD_jazyk">programovacího jazyka</a>, původně určeného hlavně k výuce <a title="Programování" href="http://cs.wikipedia.org/wiki/Programov%C3%A1n%C3%AD">programování</a>. Jeho různé varianty a odvozeniny se však používají i k programování reálných aplikací. Jeho název byl zvolen na počest francouzského filosofa, matematika a fyzika <a title="Blaise Pascal" href="http://cs.wikipedia.org/wiki/Blaise_Pascal">Blaise Pascala</a>.</p>
+<p>Návrh programovacího jazyka Pascal pochází ze začátku 70. let od profesora <a title="Niklaus Wirth" href="http://cs.wikipedia.org/wiki/Niklaus_Wirth">Niklause Wirtha</a> z Vysoké školy technické v <a title="Curych" href="http://cs.wikipedia.org/wiki/Curych">Curychu</a>. Autor sledoval návrhem jazyka tyto cíle:</p>
+<ul>
+<li>vytvořit jazyk vhodný pro výuku programování, který by byl založen na omezeném počtu srozumitelných konstrukcí,</li>
+<li>navrhnout strukturu jazyka tak, aby bylo snadné implementovat Pascal na většině tehdejších počítačů.</li>
+</ul>
+<p>První verze Pascalu byla publikována r. <a title="1971" href="http://cs.wikipedia.org/wiki/1971">1971</a>, o 3 roky později (<a title="1974" href="http://cs.wikipedia.org/wiki/1974">1974</a>) byla uveřejněna opravená definice jazyka. V roce <a title="1981" href="http://cs.wikipedia.org/wiki/1981">1981</a> byla vydána norma <a title="Mezinárodní organizace pro normalizaci" href="http://cs.wikipedia.org/wiki/Mezin%C3%A1rodn%C3%AD_organizace_pro_normalizaci">ISO</a>. Vedle toho vznikla řada komerčních implementací Pascalu, které se od Pascalu dle normy ISO více či méně odchylovaly, zejména zavedením dalších konstrukcí zjednodušujících praktické programování. V oblasti <a title="Osobní počítač" href="http://cs.wikipedia.org/wiki/Osobn%C3%AD_po%C4%8D%C3%ADta%C4%8D">PC</a> dosáhla patrně největšího úspěchu implementace Turbo Pascal firmy <a title="Borland" href="http://cs.wikipedia.org/wiki/Borland">Borland</a>. Objektové rozšíření Pascalu se pak stalo i základem systému <a title="Delphi" href="http://cs.wikipedia.org/wiki/Delphi">Delphi</a> téže firmy.</p>
+<div id="contentbox">
+<div id="content">
+<div id="wikitext">
+<ul>
+<li><strong>Vlastnosti</strong>
+<ul>
+<li>vznik v 70. letech na technická univerzitě Curychu</li>
+<li>pro výuku programování strukturovaného programování</li>
+<li>přesná deklarace dat, přehledný zápis</li>
+</ul>
+</li>
+<li><strong>Struktura programu</strong>
+<ul>
+<li>příkazy odděleny středníkem na samostatných řádcích</li>
+<li>odsazení (indentace) příkazů podle zanoření v programové struktuře</li>
+<li><strong>Deklarační část</strong>
+<ul>
+<li>hlavička, deklarace typů, konstant, proměnných, procedur a funkcí</li>
+</ul>
+</li>
+<li><strong>Hlavní program</strong>
+<ul>
+<li>programové struktury &#8211; seskupení příkazů, větvení, cykly &#8230;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+<ul>
+<li><strong>Typy dat</strong>
+<div><img title="" src="http://info.spsnome.cz/uploads/Maturita/typy.jpg" alt="" width="300" /></div>
+</li>
+</ul>
+<td valign="top">
+<ul>
+<li><strong>Způsob deklarace</strong></li>
+</ul>
+<div>
+<pre>type evidence = record
+                 begin
+                  jmeno  : string[20];
+                  vek    : integer;
+                  vydelek: real;
+                 end;
+var zamestnanci: array[1..200] of evidence;
+    k,n,i      : integer
+    soubor     : text;</pre>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Programové struktury</h3>
+<ul>
+<li><strong>Vstup a výstup dat</strong>
+<ul>
+<li>využití systémových procedur pro čtení <strong>read()</strong> a pro výpis <strong>write()</strong></li>
+<li>načtení hodnoty do proměnné <strong>cislo</strong>
+<ul>
+<li><code>write('Zadej hodnotu cisla : ') ;readln('cislo')</code></li>
+</ul>
+</li>
+<li>výpis výsledku součtu čísel v proměnných <strong>a</strong>,<strong>b</strong>
+<ul>
+<li><code>writeln('Soucet cisel ',a,' + ',b,' = ',a+b)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Syntaxe podmínek</strong></li>
+</ul>
+<table border="1" cellspacing="0" cellpadding="4">
+<tbody>
+<tr>
+<td valign="top">
+<ul>
+<li><strong>Jednoduchá podmínka</strong></li>
+</ul>
+<pre>if cislo &lt; 0
+  then write('Chyba!');</pre>
+</td>
+<td valign="top">
+<ul>
+<li><strong>Úplná podmínka</strong></li>
+</ul>
+<pre>if cislo &lt; 0
+  then write('Chyba!')
+  else write(cislo);</pre>
+</td>
+<td valign="top">
+<ul>
+<li><strong>Kombinovaná podmínka</strong></li>
+</ul>
+<pre>if (a &gt; 5) and (a &lt; 10)
+  then write('Spravne zadani')</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Syntaxe cyklů</strong></li>
+</ul>
+<table border="1" cellspacing="0" cellpadding="4">
+<tbody>
+<tr>
+<td valign="top">
+<ul>
+<li>cyklus <strong>FOR</strong></li>
+</ul>
+<div>s počítadlem</div>
+<pre>    for i:=1 to 100 do
+     begin
+       příkaz_cyklu;
+       příkaz_cyklu;
+     end;</pre>
+</td>
+<td valign="top">
+<ul>
+<li>cyklus <strong>WHILE</strong></li>
+</ul>
+<div>se vstupní podmínkou</div>
+<pre>    while i &gt; 0 do
+      begin
+        příkaz_cyklu;
+        příkaz_cyklu;
+      end;</pre>
+</td>
+<td valign="top">
+<ul>
+<li>cyklus <strong>REPEAT &#8211; UNTIL</strong></li>
+</ul>
+<div>s výstupní podmínkou</div>
+<pre>    repeat;
+      příkaz_cyklu;
+      příkaz_cyklu;
+    until konec = 'k';</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Práce se soubory</h3>
+<ul>
+<li><strong>Deklarace a připojení</strong>
+<ul>
+<li><code>var &lt;Název proměnné&gt; : File of Integer ; {ciselny soubor}</code>
+<ul>
+<li><code>var &lt;Název proměnné&gt; : Text ; {textovy soubor}</code></li>
+</ul>
+</li>
+<li><code>assign (&lt;Jméno proměnné&gt; , &lt;Jméno souboru&gt; );</code>
+<ul>
+<li><code>assign (Soubor , 'C:\Text.txt');</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Vytvoření/přepis souboru</strong>
+<dl>
+<dd>
+<ul>
+<li><code>rewrite ( &lt;Jméno proměnné&gt; );</code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><strong>Čtení souboru</strong>
+<dl>
+<dd>
+<ul>
+<li><code>reset ( &lt;Jméno proměnné&gt; );</code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><strong>Připojení na konec souboru</strong>
+<dl>
+<dd>
+<ul>
+<li><code>append ( &lt;Jméno proměnné&gt; );</code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><strong>Uzavření souboru</strong>
+<dl>
+<dd>
+<ul>
+<li><code>close ( &lt;Jméno proměnné&gt; );</code></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2>Jazykové konstrukce</h2>
+<p>Pascal je ve své původní formě čistým procedurálním jazykem, obsahující skupinu řídicích konstrukcí jako je <em>for</em>, <em>while</em>, <em>if</em>, <em>then</em>, <em>else</em>, převzaté z <a title="ALGOL" href="http://cs.wikipedia.org/wiki/ALGOL">ALGOLu</a>. Obsahuje však také mnoho konstrukcí pro strukturování dat, jako jsou <em>definice <a title="Datový typ" href="http://cs.wikipedia.org/wiki/Datov%C3%BD_typ">datových typů</a></em>, <em><a title="Datový typ" href="http://cs.wikipedia.org/wiki/Datov%C3%BD_typ#Heterogenn.C3.AD_datov.C3.BD_typ">záznamy</a> (také struktury, <code>record</code>)</em>, <em><a title="Ukazatel (informatika)" href="http://cs.wikipedia.org/wiki/Ukazatel_(informatika)">ukazatele</a> (<code>pointer</code>)</em>, <em><a title="Výčet (informatika) (stránka neexistuje)" href="http://cs.wikipedia.org/w/index.php?title=V%C3%BD%C4%8Det_(informatika)&amp;action=edit&amp;redlink=1">výčty</a></em> a <em><a title="Množina" href="http://cs.wikipedia.org/wiki/Mno%C5%BEina">množiny</a></em> (<code>set</code>).</p>
+<p>Programy v Pascalu začínají klíčovým slovem <strong>program</strong>, v původních variantách se seznamem standardních vstupů a výstupů ve formě parametrů. Následuje hlavní blok příkazů, uvozený klíčovými slovy <strong>begin</strong> a <strong>end</strong>. Jednotlivé příkazy jsou odděleny středníkem, tečka ukončuje program nebo jeho jednotku (<code>unit</code>). Jazyk nerozlišuje velká a malá písmena.</p>
+<h3>Hello world</h3>
+<p>Standardní program <a title="Hello world" href="http://cs.wikipedia.org/wiki/Hello_world">Hello world</a> vypadá v jazyce Pascal takto:</p>
+<div dir="ltr">
+<div>
+<pre>program HelloWorld(output);
+begin
+  WriteLn('Hello, World!');
+end.</pre>
+</div>
+</div>
+<h3>Datové typy</h3>
+<p><a title="Datový typ" href="http://cs.wikipedia.org/wiki/Datov%C3%BD_typ">Datový typ</a> definuje strukturu proměnné a způsob nakládání s ní. Jazyk obsahuje několik předdefinovaných typů, přičemž programátor může odvozením tvořit typy další. Mezi předdefinované typy patří:</p>
+<table border="1">
+<tbody>
+<tr>
+<th>Datový typ</th>
+<th>Typ hodnot, které lze do typu uložit</th>
+</tr>
+<tr>
+<td>integer</td>
+<td><a title="Celé číslo" href="http://cs.wikipedia.org/wiki/Cel%C3%A9_%C4%8D%C3%ADslo">Celé číslo</a></td>
+</tr>
+<tr>
+<td>real</td>
+<td>Číslo s <a title="Plovoucí řádová čárka" href="http://cs.wikipedia.org/wiki/Plovouc%C3%AD_%C5%99%C3%A1dov%C3%A1_%C4%8D%C3%A1rka">plovoucí řádovou čárkou</a></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Hodnota <code>true</code> nebo <code>false</code></td>
+</tr>
+<tr>
+<td>char</td>
+<td>Jeden znak <a title="Znaková sada" href="http://cs.wikipedia.org/wiki/Znakov%C3%A1_sada">znakové sady</a></td>
+</tr>
+<tr>
+<td>string</td>
+<td>Řetězec znaků, indexovaný od 1</td>
+</tr>
+</tbody>
+</table>
+<p>Rozsah povolených hodnot, které je možno uložit do proměnných těchto typů, je dán implementací. Mezi některými typy existují konverzní funkce, například <code>Round</code> (zaokrouhlení <code>real</code> na<code>integer</code>).</p>
+<h3>Řídicí struktury</h3>
+<p>Pascal je <a title="Strukturovaný jazyk" href="http://cs.wikipedia.org/wiki/Strukturovan%C3%BD_jazyk">strukturovaný jazyk</a>, to znamená, že běh programu je strukturován ve standardních konstrukcích, a to ideálně bez použití příkazu <strong>goto</strong>:</p>
+<p>Základní řídicí strukturou je struktura <strong>if</strong>..<strong>then</strong>..<strong>else</strong>, která řídí průběh programu v závislosti na určené podmínce:</p>
+<div dir="ltr">
+<div>
+<pre>if a &gt; b then
+  writeln('Condition met')
+else
+  writeln('Condition not met');</pre>
+</div>
+</div>
+<h4>Cykly</h4>
+<p>Cykly slouží pro opakované provádění příkazu nebo bloku příkazů:</p>
+<div dir="ltr">
+<div>
+<pre>while a &lt; 10 do begin
+                a:= a+1;
+                end; 
+
+for i := 1 to 10 do
+  writeln('Iteration: ', i:1);
+
+repeat
+  a := a + 1
+until a = 10;
+
+case i of
+  0: write('zero');
+  1: write('one');
+  2: write('two')
+end;</pre>
+</div>
+</div>
+<p>Cykly lze okamžitě ukončit příkazem <strong>break</strong>; příkaz <strong>continue</strong> znamená přechod na začátek další iterace cyklu.</p>
+<h3>Procedury a funkce</h3>
+<p>Pascal umožňuje členit programy na procedury a funkce, které lze navíc libovolně zanořovat. Konstrukce <strong>program</strong> je vždy logicky nejzazší blok. Funkce se od procedury liší tím, že umožňuje vrátit volajícímu příkazu <em>návratovou hodnotu</em> příslušného typu. Nastavení návratové hodnoty se provádí přiřazením do názvu funkce nebo u novějších variant do pseudoproměnné <strong>result</strong>.</p>
+<div dir="ltr">
+<div>
+<pre>program muj(output);
+
+procedure vypis(var i: integer);
+
+  function dalsi(i: integer): integer;
+  begin
+    dalsi := i + 1;
+  end;
+
+begin
+  WriteLn('Celkem: ', i);
+  i := dalsi(i);
+end;
+
+begin
+  i := 1;
+  while i &lt;= 10 do
+    vypis(i);
+end.</pre>
+</div>
+</div>
+<p>Pro okamžité opuštění procedury nebo funkce slouží příkaz <strong>exit</strong>.</p>
+<h3>Operátory</h3>
+<p>Pascal podporuje tyto operátory:</p>
+<p>
+<table border="1">
+<tbody>
+<tr>
+<th>Operátor</th>
+<th>Význam</th>
+</tr>
+<tr>
+<td> :=</td>
+<td>přiřazení</td>
+</tr>
+<tr>
+<td>=</td>
+<td>rovnost</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>nerovnost</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>větší než</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>menší než</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>větší nebo rovno</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>menší nebo rovno</td>
+</tr>
+<tr>
+<td>+</td>
+<td>součet, spojení řetězců, sjednocení množin</td>
+</tr>
+<tr>
+<td>&#8211;</td>
+<td>rozdíl, rozdíl množin</td>
+</tr>
+<tr>
+<td>*</td>
+<td>násobení, průnik množin</td>
+</tr>
+<tr>
+<td>/</td>
+<td>dělení, výsledkem je reálné číslo</td>
+</tr>
+<tr>
+<td><strong>div</strong></td>
+<td>celočíselné dělení</td>
+</tr>
+<tr>
+<td><strong>mod</strong></td>
+<td>zbytek po celočíselném dělení, modulo</td>
+</tr>
+<tr>
+<td><strong>and</strong></td>
+<td>logické <strong>AND</strong></td>
+</tr>
+<tr>
+<td><strong>or</strong></td>
+<td>logické <strong>OR</strong></td>
+</tr>
+<tr>
+<td><strong>not</strong></td>
+<td>logická negace</td>
+</tr>
+<tr>
+<td><strong>in</strong></td>
+<td>přítomnost prvku v množině (set)</td>
+</tr>
+<tr>
+<td>@</td>
+<td>adresa proměnné nebo podprogramu</td>
+</tr>
+<tr>
+<td>^</td>
+<td>dereference ukazatele</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<h3>Seřazení n čísel podle velikosti</h3>
+
+<xmp>
+var
+  a, b, c, d, e : integer;
+  var pole: array[1..99999999] of integer;
+
+{----------------------------------------------}
+
+Procedure vstup;
+
+begin
+   b := 1;
+   for b:=1 to a do
+     begin
+       write('Zadej ',b,'. cislo: ');
+       read(pole[b]);
+     end;
+end;
+
+{----------------------------------------------}
+
+Procedure razeni_jednotlive;
+
+begin
+   b := 1;
+   for b:=1 to a-1 do
+     begin
+       if (pole[b] > pole[b+1]) then begin
+                                        c := pole[b];
+                                        pole[b] := pole[b+1];
+                                        pole[b+1] := c;
+                                     end;
+     end;
+end;
+
+{----------------------------------------------}
+
+Procedure razeni;
+
+begin
+   for d:=1 to a do razeni_jednotlive;
+end;
+
+{----------------------------------------------}
+
+Procedure vystup;
+
+begin
+   writeln;writeln;
+   write(' |');
+
+   e := 1;
+   for e:=1 to a do
+     begin
+       write(' ',pole[e],' |');
+     end;
+end;
+
+{----------------------------------------------}
+
+begin
+   writeln('Razeni podle velikosti od nejmensiho.');
+   write('Pocet cisel, ktera chcete seradit: ');
+   read(a);
+   writeln;
+
+   vstup;
+   razeni;
+   vystup;
+
+   readln;readln;
+end.
+</xmp>
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

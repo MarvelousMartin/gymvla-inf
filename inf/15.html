@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+<!--**************** OBSAH ****************-->	
+
+
+<h2>Příkazy vstupu a výstupu, přiřazovací příkaz</h2>
+	
+ 
+<h3>Základní pojmy</h3>
+<p><strong>Syntaxe</strong> příkazu vždy popisuje, jak tento příkaz správně bez chyby vytvořit.<br />
+<strong>Sémantika</strong> popisuje význam tohoto příkazu.</p>
+<h3>Základní pojmy</h3>
+<p><strong>Syntaxe</strong> příkazu vždy popisuje, jak tento příkaz správně bez chyby vytvořit.<br />
+<strong>Sémantika</strong> popisuje význam tohoto příkazu.</p>
+<h3>Proměnná</h3>
+<p>(variable) je objekt, který má pevně stanovené označení a nese určitou hodnotu. Tato hodnota se může v průběhu programu měnit. Pro označení proměnných se používají jména složená z písmen a číslic, první však musí být písmeno.<br />
+<strong>Konstanta</strong> (constant) je také pojmenovaný objekt určité hodnoty, na rozdíl od proměnné se hodnota konstanty nemůže měnit. Konstanta pi například může obsahovat hodnotu 3.14.<br />
+Proměnná může získávat hodnotu dvěma způsoby: načtením vstupní hodnoty pomocí <strong>příkazu vstupu</strong> nebo <strong>přiřazovacím příkazem</strong></p>
+<p><strong>Proměnná, která dosud nezískala žádnou hodnotu, má nedefinovaný obsah</strong>.</p>
+<h3>Přiřazovací příkaz</h3>
+<ul>
+<li>Je základem všech algoritmů zapsaných jak pomocí diagramů, tak i v libovolném programovacím jazyce.</li>
+<li>Syntaxe přiřazovacího příkazu je <strong>proměnná:=výraz</strong>.</li>
+<li>Čte se: „<strong>Do proměnné přiřaď výraz</strong>.“</li>
+<li>Symbol přiřazení se nachází uprostřed, často se bude jednat o znak <strong>:=</strong>.</li>
+<li>Výrazy mohou obsahovat konstanty i proměnné, aritmetické operátory, kulaté závorky.</li>
+<li>Základní aritmetické operátory jsou +, -, *, /.</li>
+</ul>
+<p><strong>Pozor!</strong> Pokud se<strong> ve výrazu na pravé straně</strong> přiřazovacího příkazu vyskytuje <strong>proměnná</strong>, musí mít již nějakou <strong>hodnotu!!!</strong></p>
+<p><strong>Sémantika přiřazovacího příkazu je následující:</strong><br />
+Nejprve se vyhodnotí hodnota výrazu na pravé straně přiřazovacího příkazu. Tato hodnota je pak přiřazena proměnné uvedené na levé straně příkazu. Předchozí hodnota této proměnné je nenávratně ztracena.</p>
+<p><strong>Příklad několika přiřazení:</strong></p>
+<xmp> a:=0
+ b:=a+5
+ c:=2*(b+4)
+ a:=a+1
+</xmp>
+
+<strong>vysvětlení</strong>
+<ul>
+<li>do proměnné a je vložena hodnota nula,</li>
+<li>do b se přiřadí hodnota o 5 větší, tedy 5,</li>
+<li>v c bude 2*(5+4)=18</li>
+<li>a nakonec do a bude přiřazena hodnota o jedničku větší, než má teď, tedy 1</li>
+</ul>
+<p>&nbsp;</p>
+<h3><strong>Příkazy vstupu a výstupu</strong></h3>
+<p>rozdělíme na dva druhy . Vstup z klávesnice a výstup na monitor (těmi se nyní budeme zabývat ) a vstup a výstup z disku (tyto rozebereme později).</p>
+<p><strong>Příkaz vstupu z klávesnice</strong></p>
+<p>Tento příkaz slouží k zadání vstupních dat do programu z klávesnice a má tvary:<br />
+<strong>čti proměnná </strong>a v Pascalu: <strong>read (</strong> proměnná);<br />
+<strong><strong>read (</strong>proměnná1, …, proměnnáN<strong>);</strong></strong></p>
+<p><strong>Průběh</strong> operace závisí na typu parametru proměnná :<br />
+typ proměnné :<br />
+<strong>char </strong>přečte se jeden znak a přiřadí se proměnné<br />
+<strong>integer</strong> přečte se posloupnost znaků tvořící dekadický zápis celého čísla ukončená mezerou, čárkou nebo znakem konce řádku<br />
+<strong>real </strong>podobně jako u INTEGER</p>
+<p>readln; přeskočí zbytek aktuálního řádku a dalším příkazem read se začíná od začátku nového řádku<br />
+readln (proměnná); má stejný význam jako realizace příkazů<br />
+read(proměnná);<br />
+readln;</p>
+<p><strong>Příkaz výstupu na monitor</strong></p>
+<p>Tento příkaz slouží k výstupu hodnot (výstupních dat) z programu na obrazovku a má tvary:<br />
+<strong>piš proměnná </strong>a v Pascalu: write (proměnná);<br />
+write (proměnná1, …, proměnnáN);<br />
+writeln; další výstup bude od začátku dalšího řádku</p>
+<p>Vystupující hodnota se udává výrazem, jehož typ může být CHAR, INTEGER, REAL nebo BOOLEAN, přičemž hodnoty TRUE i FALSE vystupují jako řetězce.<br />
+Řetězce v uvozovkách ( ‘ … ‘ ) vystupují beze změny.</p>
+<p>write ( parametr );</p>
+<p>Parametr může mít jeden z následujících tvarů:<br />
+a) <strong>výraz</strong> reprezentující výstupní hodnotu<br />
+b) <strong>výraz : počet</strong> , kde počet reprezentuje počet znaků výstupu<br />
+c) <strong>výraz : počet</strong> <strong>: desmísta</strong> , kde desmísta udává počet desetinných míst výstupu</p>
+<p>Například:<br />
+writeln(kolik,znak)        vypíše    5k<br />
+writeln(‘Výsledek je’ , kolik )        vypíše       Výsledek je 5</p>
+<h4><strong>Příklady:</strong></h4>
+<h5><strong></strong><br />
+<strong>Příklad1:</strong></h5>
+<p><strong></strong><br />
+Vytvořte program pro výpočet obsahu a obvodu obdélníka se zadanými stranami delka,sirka (celá nezáporná čísla).</p>
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="55%"><strong>program</strong> Obdelnik;</td>
+<td width="45%"></td>
+</tr>
+<tr>
+<td width="55%"><strong>  var</strong> delka,sirka, obvod,obsah :integer;</td>
+<td width="45%">{Deklarace proměnných}</td>
+</tr>
+<tr>
+<td width="55%"><strong>  begin</strong></td>
+<td width="45%"></td>
+</tr>
+<tr>
+<td width="55%">    writeln(‘Zadejte délku obdélníka’);</td>
+<td width="45%">{Napíše výzvu k zadání délky}</td>
+</tr>
+<tr>
+<td width="55%">    read(delka);</td>
+<td width="45%">{Načte délku}</td>
+</tr>
+<tr>
+<td width="55%">    writeln(‘Zadejte délku obdélníka’);</td>
+<td width="45%">{Napíše výzvu k zadání šířky}</td>
+</tr>
+<tr>
+<td width="55%">   read(sirka);</td>
+<td width="45%">{Načte šířku}</td>
+</tr>
+<tr>
+<td width="55%">    obvod:=2*(delka+sirka);</td>
+<td width="45%">{Vypočítá obvod}</td>
+</tr>
+<tr>
+<td width="55%">    obsah:=delka*sirka;</td>
+<td width="45%">{Vypočítá obsah}</td>
+</tr>
+<tr>
+<td width="55%">    writeln(‘Obvod je ‘,obvod);</td>
+<td width="45%">{Vytiskne obvod}</td>
+</tr>
+<tr>
+<td width="55%">    writeln(‘Obsah je ‘,obsah);</td>
+<td width="45%">{Vytiskne obsah}</td>
+</tr>
+<tr>
+<td width="55%"><strong>  end</strong>.</td>
+<td width="45%"></td>
+</tr>
+</tbody>
+</table>
+<h5><strong>Příklad2:</strong></h5>
+<p><strong></strong><br />
+Vytvořte program, který ze zadaného času v <a id="n40df04f1047a22a" href="http://bydleni-a-design.zoot.cz/dekorace">hodinách</a>, minutách a sekundách vyjádří čas<br />
+a) v minutách a sekundách<br />
+b) v sekundách</p>
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="61%"><strong>program</strong> Cas;</td>
+<td width="39%"></td>
+</tr>
+<tr>
+<td width="61%"><strong>  var</strong> hod,min,sek: integer;<br />
+minuty,sekundy,jensekundy:integer;</td>
+<td width="39%">{Deklarace proměnných}</td>
+</tr>
+<tr>
+<td width="61%"><strong>  begin</strong></td>
+<td width="39%"></td>
+</tr>
+<tr>
+<td width="61%">    writeln(‘Zadejte čas: hod  min  sek’);</td>
+<td width="39%">{Napíše výzvu k zadání času}</td>
+</tr>
+<tr>
+<td width="61%">    read(hod,min,sek);</td>
+<td width="39%">{Načte <a id="s0df04f1047a22a" href="http://bydleni-a-design.zoot.cz/dekorace">hodiny</a>,minuty,sekundy}</td>
+</tr>
+<tr>
+<td width="61%">    minuty:=hod*60+min;</td>
+<td width="39%">{Zjistí čas v minutách}</td>
+</tr>
+<tr>
+<td width="61%">    sekundy:=sek;</td>
+<td width="39%">{Zjistí čas v sekundách}</td>
+</tr>
+<tr>
+<td width="61%">    jensekundy:=3600*hod+60*min+sek;</td>
+<td width="39%">{Převede čas na sekundy}</td>
+</tr>
+<tr>
+<td width="61%">    writeln(‘Minuty a sekundy ‘, minuty,’:&#8216;,sekundy);</td>
+<td width="39%">{Vytiskne v min a sekundách}</td>
+</tr>
+<tr>
+<td width="61%">    writeln(‘V sekundách ‘, jensekundy);</td>
+<td width="39%">{Vytiskne jen v sekundách}</td>
+</tr>
+<tr>
+<td width="61%"><strong>  end</strong>.</td>
+<td width="39%"></td>
+</tr>
+</tbody>
+</table>
+<h5><strong>Příklad3:</strong></h5>
+<p><strong></strong><br />
+Sestavte program, který po zadání obnosu v celých korunách zjistí, kolik budeme potřebovat na jeho vyplacení desetikorun, pětikorun a korun.</p>
+<p>Nejprve si ukážeme výpočet na konkrétním <strong>příkladě</strong>. Zadaný obnos je 28 Kč.</p>
+<h6>Nové operátory:</h6>
+<p><strong>div</strong> – celočíselné dělení</p>
+<p><strong>mod</strong> &#8211; zbytek po celočíselném dělení</p>
+<xmp> desetikoruny  28:10 = 2    tedy     28 div 2=2
+ zbylý obnos   28 - 20 = 8  tedy     28 mod 10 = 8
+ pětikoruny     8 : 5 = 1   tedy      8 div 5 = 1
+ zbylý obnos    8 - 5 = 3   tedy      8 mod 5 = 3
+ koruny                 3   tedy      zbylý obnos</xmp>
+<p>A nyní program:</p>
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="54%"><strong>program</strong> Drobne;</td>
+<td width="46%"></td>
+</tr>
+<tr>
+<td width="54%"><strong>  var</strong> obnos,deset,pet,jedna<strong>:</strong> integer;</td>
+<td width="46%">{Deklarace proměnných}</td>
+</tr>
+<tr>
+<td width="54%"><strong>  begin</strong></td>
+<td width="46%"></td>
+</tr>
+<tr>
+<td width="54%">    writeln(‘Zadejte obnos’);</td>
+<td width="46%">{Napíše výzvu k zadání obnosu}</td>
+</tr>
+<tr>
+<td width="54%">    readln(obnos);</td>
+<td width="46%">{Načte obnos}</td>
+</tr>
+<tr>
+<td width="54%">    deset:=obnos div 10;</td>
+<td width="46%">{Zjistí počet desetikorun}</td>
+</tr>
+<tr>
+<td width="54%">    obnos:=obnos mod 10;</td>
+<td width="46%">{Zbytek po vyplacení desetikorun}</td>
+</tr>
+<tr>
+<td width="54%">    pet:=obnos div 5;</td>
+<td width="46%">{Počet pětikorun}</td>
+</tr>
+<tr>
+<td width="54%">    obnos:=obnos mod 5;</td>
+<td width="46%">{Zbytek po vyplacení pětikorun}</td>
+</tr>
+<tr>
+<td width="54%">    jedna:=obnos;</td>
+<td width="46%">{Počet korun}</td>
+</tr>
+<tr>
+<td colspan="2" width="100%">    writeln(‘Desetikorun je ‘, deset , ‘ , petikorun je ‘, pet , ‘ a korun je ‘, jedna );</td>
+</tr>
+<tr>
+<td width="54%"><strong>  end</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h4><strong>Podmínka</strong> (condition)</h4>
+<p>je logický výraz, jehož hodnotou je pravda nebo nepravda. Říkáme, že podmínka platí nebo neplatí.</p>
+<p><strong>Základní relační operátory</strong> jsou &lt;,&gt;,=,&lt;=,&gt;=,&lt;&gt;.<br />
+Ve výrazu lze použít proměnné, konstanty i kulaté závorky. Obecně v podmínce může být výraz vlevo i vpravo, navíc se dají sestavovat složené podmínky pomocí logických spojek. Toho si ale užijete až v konkrétním programovacím jazyce.<br />
+<strong>Sémantika je následující:</strong><br />
+Nejprve se vyhodnotí podmínka. Pokud platí, provede se příkaz (nebo více příkazů) uvedený ve větvi označené symbolem +. Pokud podmínka neplatí, provede se příkaz (nebo více příkazů) uvedený ve větvi označené symbolem -. Příkazem uvnitř může být přiřazovací příkaz, vstup nebo výstup dat i další podmíněný příkaz. V posledním případě mluvíme o složeném podmíněném příkazu nebo prostě o podmínce v podmínce. Jedna z větví v rozhodovacím bloku může být prázdná, neobsahuje žádný příkaz. Obvykle se jedná o větev označenou -. Takový podmíněný příkaz nazýváme neúplný. Úplný podmíněný příkaz má v každé větvi alespoň jeden příkaz.</p>
+<p><strong>Příklad několika podmínek:</strong><br />
+a=0<br />
+b&gt;=0<br />
+i=10<br />
+n&lt;100<br />
+s&gt;2*(i+j)<br />
+j&lt;&gt;0</p>
+
+
+<h3>Pascal - Přiřazování a I/O</h3>
+
+<xmp>
+var
+  a, b, c : integer; 	   {Deklarace promennych}
+
+begin
+  write('Zadej prumer: '); {Prikaz vystupu}
+  read(a);                 {Prikaz vstupu}
+
+  b:=round(Pi*a);          {Prirazeni}
+  c:=round(Pi*a*a);        {Prirazeni}
+
+  writeln('Obvod je asi ',b,' a obsah asi ',c,'.');
+                           {Vystup s vysledky po prirazeni}
+
+  readln;readln;
+end.
+</xmp>
+
+
+<!--**************************************-->
+</div>
+</body>
+</html>

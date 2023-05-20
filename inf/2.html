@@ -1,0 +1,762 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<h2>Zpracování dat na PC</h2>
+
+<h3>Osnova</h3>
+<ul>
+	<li>Kódové tabulky</li>
+	
+		<ul>
+			<li>České znakové sady</li>
+			<li>Univerzální znakové sady</li>
+		</ul>
+	
+	<li>Číselné soustavy</li>
+	
+		<ul>
+			<li>Desítková</li>
+			<li>Dvojková</li>
+			<li>Šestnáctková</li>
+		</ul>
+	
+	<li>Datové soubory</li>
+</ul>
+<h3>Průběh zpracování informace</h3>
+<p><img src="http://maturita-vyt.buchtic.net/images/02/zpracovani-informace.png" alt="transformace informace" style="max-width:200px;"></p>
+<h3>Kódování informace</h3>
+<ul>
+<li>změna popisu informace podle zadaných pravidel</li>
+<li>nejčastěji převod informace na číselný kód</li>
+<li>využití dvojkové číselné soustavy
+<ul>
+<li><strong>Příklad</strong>
+<div>znaku  A  je přiřazen číselný kód  65 </div>
+<div>desítkový zápis čísla  65  se dá vyjádřit dvojkovým (binárním) zápisem  0100 0001 </div>
+<div>binární kód se dá převést na skupinu elektrických impulzů</div>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Znakové sady pro kódování znaků</h3>
+<ul>
+<li>dohodnutá pravidla pro kódování a dekódování dat do/z binárního kódu</li>
+<li><a href="http://cs.wikipedia.org/wiki/Znakov%C3%A1_sada" target="_blank" rel="nofollow"> znaková sada </a> &#8211; množina znaků v kódovací tabulce</li>
+<li>postupně vznikaly širší sady pro národní a speciální znaky</li>
+</ul>
+<h5>Základní znaková sada</h5>
+<h3 id="toc-ascii">ASCII</h4>
+<p>Standard ASCII (American Standard Code for Information Interchange) předepisuje kódovací tabulku, která vznikala v letech 1960 až 1967 a definuje číselnou reprezentaci nejčastěji používaných symbolů. Tabulka obsahuje 128 znaků: písmena, číslice, závorky, znaky matematických operací, interpunkční znaménka, speciální znaky a řídící znaky. Z této množiny je 33 znaků „neviditelných“ (non-printable či whitespace) a 95 znaků „viditelných“ (printable). Na této tabulce je založena většina moderních znakových sad.</p>
+<h4 id="toc-tabulka-ascii">Tabulka ASCII</h4>
+<p>
+<table>
+<tbody>
+<tr>
+<th>Index</th>
+<th>+0</th>
+<th>+1</th>
+<th>+2</th>
+<th>+3</th>
+<th>+4</th>
+<th>+5</th>
+<th>+6</th>
+<th>+7</th>
+</tr>
+<tr>
+<th>0</th>
+<td>0 (hex = 0)<br />
+<abbr title="null">NUL</abbr></td>
+<td>1 (hex = 1)<br />
+<abbr title="start of heading">SOH</abbr></td>
+<td>2 (hex = 2)<br />
+<abbr title="start of text">STX</abbr></td>
+<td>3 (hex = 3)<br />
+<abbr title="end of text">ETX</abbr></td>
+<td>4 (hex = 4)<br />
+<abbr title="end of transmission">EOT</abbr></td>
+<td>5 (hex = 5)<br />
+<abbr title="enquiry">ENQ</abbr></td>
+<td>6 (hex = 6)<br />
+<abbr title="acknowledge">ACK</abbr></td>
+<td>7 (hex = 7)<br />
+<abbr title="bell">BEL</abbr></td>
+</tr>
+<tr>
+<th>8</th>
+<td>8 (hex = 8)<br />
+<abbr title="backspace">BS</abbr></td>
+<td>9 (hex = 9)<br />
+<abbr title="horizontal tab">TAB</abbr></td>
+<td>10 (hex = A)<br />
+<abbr title="line feed / new line">LF</abbr></td>
+<td>11 (hex = B)<br />
+<abbr title="vertical tab">VT</abbr></td>
+<td>12 (hex = C)<br />
+<abbr title="form feed / new page">FF</abbr></td>
+<td>13 (hex = D)<br />
+<abbr title="carriage return">CR</abbr></td>
+<td>14 (hex = E)<br />
+<abbr title="shift out">SO</abbr></td>
+<td>15 (hex = F)<br />
+<abbr title="shift in">SI</abbr></td>
+</tr>
+<tr>
+<th>16</th>
+<td>16 (hex = 10)<br />
+<abbr title="data link escape">DLE</abbr></td>
+<td>17 (hex = 11)<br />
+<abbr title="device control one">DC1</abbr></td>
+<td>18 (hex = 12)<br />
+<abbr title="device control two">DC2</abbr></td>
+<td>19 (hex = 13)<br />
+<abbr title="device control three">DC3</abbr></td>
+<td>20 (hex = 14)<br />
+<abbr title="device control four">DC4</abbr></td>
+<td>21 (hex = 15)<br />
+<abbr title="negative acknowledge">NAK</abbr></td>
+<td>22 (hex = 16)<br />
+<abbr title="synchronous idle">SYN</abbr></td>
+<td>23 (hex = 17)<br />
+<abbr title="end of transmission block">ETB</abbr></td>
+</tr>
+<tr>
+<th>24</th>
+<td>24 (hex = 18)<br />
+<abbr title="cancel">CAN</abbr></td>
+<td>25 (hex = 19)<br />
+<abbr title="end of medium">EM</abbr></td>
+<td>26 (hex = 1A)<br />
+<abbr title="substitute">SUB</abbr></td>
+<td>27 (hex = 1B)<br />
+<abbr title="escape">ESC</abbr></td>
+<td>28 (hex = 1C)<br />
+<abbr title="file separator">FS</abbr></td>
+<td>29 (hex = 1D)<br />
+<abbr title="group separator">GS</abbr></td>
+<td>30 (hex = 1E)<br />
+<abbr title="record separator">RS</abbr></td>
+<td>31 (hex = 1F)<br />
+<abbr title="unit separator">US</abbr></td>
+</tr>
+<tr>
+<th>32</th>
+<td>32 (hex = 20)<br />
+(mezera)</td>
+<td>33 (hex = 21)<br />
+!</td>
+<td>34 (hex = 22)<br />
+&#8222;</td>
+<td>35 (hex = 23)<br />
+#</td>
+<td>36 (hex = 24)<br />
+$</td>
+<td>37 (hex = 25)<br />
+%</td>
+<td>38 (hex = 26)<br />
+&amp;</td>
+<td>39 (hex = 27)<br />
+&#8218;</td>
+</tr>
+<tr>
+<th>40</th>
+<td>40 (hex = 28)<br />
+(</td>
+<td>41 (hex = 29)<br />
+)</td>
+<td>42 (hex = 2A)<br />
+*</td>
+<td>43 (hex = 2B)<br />
++</td>
+<td>44 (hex = 2C)<br />
+,</td>
+<td>45 (hex = 2D)<br />
+&#8211;</td>
+<td>46 (hex = 2E)<br />
+.</td>
+<td>47 (hex = 2F)<br />
+/</td>
+</tr>
+<tr>
+<th>48</th>
+<td>48 (hex = 30)<br />
+0</td>
+<td>49 (hex = 31)<br />
+1</td>
+<td>50 (hex = 32)<br />
+2</td>
+<td>51 (hex = 33)<br />
+3</td>
+<td>52 (hex = 34)<br />
+4</td>
+<td>53 (hex = 35)<br />
+5</td>
+<td>54 (hex = 36)<br />
+6</td>
+<td>55 (hex = 37)<br />
+7</td>
+</tr>
+<tr>
+<th>56</th>
+<td>56 (hex = 38)<br />
+8</td>
+<td>57 (hex = 39)<br />
+9</td>
+<td>58 (hex = 3A)<br />
+:</td>
+<td>59 (hex = 3B)<br />
+;</td>
+<td>60 (hex = 3C)<br />
+&lt;</td>
+<td>61 (hex = 3D)<br />
+=</td>
+<td>62 (hex = 3E)<br />
+&gt;</td>
+<td>63 (hex = 3F)<br />
+?</td>
+</tr>
+<tr>
+<th>64</th>
+<td>64 (hex = 40)<br />
+@</td>
+<td>65 (hex = 41)<br />
+A</td>
+<td>66 (hex = 42)<br />
+B</td>
+<td>67 (hex = 43)<br />
+C</td>
+<td>68 (hex = 44)<br />
+D</td>
+<td>69 (hex = 45)<br />
+E</td>
+<td>70 (hex = 46)<br />
+F</td>
+<td>71 (hex = 47)<br />
+G</td>
+</tr>
+<tr>
+<th>72</th>
+<td>72 (hex = 48)<br />
+H</td>
+<td>73 (hex = 49)<br />
+I</td>
+<td>74 (hex = 4A)<br />
+J</td>
+<td>75 (hex = 4B)<br />
+K</td>
+<td>76 (hex = 4C)<br />
+L</td>
+<td>77 (hex = 4D)<br />
+M</td>
+<td>78 (hex = 4E)<br />
+N</td>
+<td>79 (hex = 4F)<br />
+O</td>
+</tr>
+<tr>
+<th>80</th>
+<td>80 (hex = 50)<br />
+P</td>
+<td>81 (hex = 51)<br />
+Q</td>
+<td>82 (hex = 52)<br />
+R</td>
+<td>83 (hex = 53)<br />
+S</td>
+<td>84 (hex = 54)<br />
+T</td>
+<td>85 (hex = 55)<br />
+U</td>
+<td>86 (hex = 56)<br />
+V</td>
+<td>87 (hex = 57)<br />
+W</td>
+</tr>
+<tr>
+<th>88</th>
+<td>88 (hex = 58)<br />
+X</td>
+<td>89 (hex = 59)<br />
+Y</td>
+<td>90 (hex = 5A)<br />
+Z</td>
+<td>91 (hex = 5B)<br />
+[</td>
+<td>92 (hex = 5C)<br />
+\</td>
+<td>93 (hex = 5D)<br />
+]</td>
+<td>94 (hex = 5E)<br />
+^</td>
+<td>95 (hex = 5F)<br />
+_</td>
+</tr>
+<tr>
+<th>96</th>
+<td>96 (hex = 60)<br />
+`</td>
+<td>97 (hex = 61)<br />
+a</td>
+<td>98 (hex = 62)<br />
+b</td>
+<td>99 (hex = 63)<br />
+c</td>
+<td>100 (hex = 64)<br />
+d</td>
+<td>101 (hex = 65)<br />
+e</td>
+<td>102 (hex = 66)<br />
+f</td>
+<td>103 (hex = 67)<br />
+g</td>
+</tr>
+<tr>
+<th>104</th>
+<td>104 (hex = 68)<br />
+h</td>
+<td>105 (hex = 69)<br />
+i</td>
+<td>106 (hex = 6A)<br />
+j</td>
+<td>107 (hex = 6B)<br />
+k</td>
+<td>108 (hex = 6C)<br />
+l</td>
+<td>109 (hex = 6D)<br />
+m</td>
+<td>110 (hex = 6E)<br />
+n</td>
+<td>111 (hex = 6F)<br />
+o</td>
+</tr>
+<tr>
+<th>112</th>
+<td>112 (hex = 70)<br />
+p</td>
+<td>113 (hex = 71)<br />
+q</td>
+<td>114 (hex = 72)<br />
+r</td>
+<td>115 (hex = 73)<br />
+s</td>
+<td>116 (hex = 74)<br />
+t</td>
+<td>117 (hex = 75)<br />
+u</td>
+<td>118 (hex = 76)<br />
+v</td>
+<td>119 (hex = 77)<br />
+w</td>
+</tr>
+<tr>
+<th>120</th>
+<td>120 (hex = 78)<br />
+x</td>
+<td>121 (hex = 79)<br />
+y</td>
+<td>122 (hex = 7A)<br />
+z</td>
+<td>123 (hex = 7B)<br />
+{</td>
+<td>124 (hex = 7C)<br />
+|</td>
+<td>125 (hex = 7D)<br />
+}</td>
+<td>126 (hex = 7E)<br />
+~</td>
+<td>127 (hex = 7F)<br />
+<abbr title="delete"><abbr title="delete">DEL</abbr></abbr></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><a href="http://en.wikipedia.org/wiki/ASCII" target="_blank" rel="nofollow"> ASCII </a> &#8211; <strong>A</strong>merican <strong>S</strong>tandard <strong>C</strong>ode for <strong>I</strong>nformation <strong>I</strong>nterchange</p>
+<ul>
+<li>základní standard pro PC</li>
+<li>délka kódu 7 bitů</li>
+<li>kódování znaků anglické abecedy</li>
+<li>počet míst 2<sup>7</sup>=128 &#8211; 95 znaků, 33 řídících kódů</li>
+</ul>
+<p><a href="http://en.wikipedia.org/wiki/ASCII" target="_blank" rel="nofollow"> ASCII </a> &#8211; rozšířená</p>
+<p>Kód ASCII je podle původní definice sedmi<a title="Bit" href="http://cs.wikipedia.org/wiki/Bit">bitový</a>, obsahuje tedy 128 platných znaků. Pro potřeby dalších jazyků a pro rozšíření znakové sady se používají osmibitová rozšíření ASCII kódu, která obsahují dalších 128 kódů. Takto rozšířený kód je přesto příliš malý na to, aby pojmul třeba jen evropské národní abecedy. Pro potřeby jednotlivých jazyků byly vytvořeny různé kódové tabulky, význam kódů nad 127 není tedy jednoznačný. Systém kódových tabulek pro národní abecedy vytvořila například organizace <a title="Mezinárodní organizace pro normalizaci" href="http://cs.wikipedia.org/wiki/Mezin%C3%A1rodn%C3%AD_organizace_pro_normalizaci">ISO</a>.</p>
+<h5>České znakové sady</h5>
+<p><a href="http://cs.wikipedia.org/wiki/CP852" target="_blank" rel="nofollow"> IBM CP852 </a> &#8211; <strong>PC Latin2</strong></p>
+<ul>
+<li>standard firmy IBM pro systém MS DOS</li>
+</ul>
+<p><a href="http://cs.wikipedia.org/wiki/K%C3%B3d_Kamenick%C3%BDch" target="_blank" rel="nofollow"> Kamenických </a> &#8211; <strong>KEYBCS</strong></p>
+<ul>
+<li>český standard pro systém MS DOS</li>
+</ul>
+<p><a href="http://cs.wikipedia.org/wiki/ISO_8859-2" target="_blank" rel="nofollow"> ISO 8859-2 </a> &#8211; <strong>ISO Latin2</strong></p>
+<ul>
+<li>mezinárodní norma z roku 1987</li>
+<li>využití pro systémy UNIX a Linux</li>
+</ul>
+<p><a href="http://cs.wikipedia.org/wiki/Windows-1250" target="_blank" rel="nofollow"> Windows-1250 </a> &#8211; <strong>CP1250</strong></p>
+<ul>
+<li>standard firmy Microsoft pro systém Windows</li>
+<li>pravděpodobně záměrná odlišnost od standardu ISO</li>
+<li>omezení kompatibility se konkurenčním systémem UNIX</li>
+</ul>
+<h5>Univerzální znaková sada</h5>
+<ul>
+<li>postupný vývoj dvou standardů
+<ul>
+<li><a href="http://www.cestina.cz/kodovani/unicode.html" target="_blank" rel="nofollow"><strong>UNICODE</strong></a></li>
+<li><strong>ISO UCS</strong> &#8211; <strong>U</strong>niversal <strong>C</strong>harakter <strong>S</strong>et</li>
+</ul>
+</li>
+<li>využití 1 &#8211; 6 Bytů pro kódování znaků</li>
+<li>možnost využití znaků několika národních prostředí současně</li>
+</ul>
+<p><a href="http://cs.wikipedia.org/wiki/UTF-8" target="_blank" rel="nofollow"> UTF-8 </a> &#8211; <strong>U</strong>niversal <strong>T</strong>ransformation <strong>F</strong>ormat</p>
+<ul>
+<li>nejpoužívanější univerzální znaková sada</li>
+</ul>
+<div></div>
+<h3>Kódové tabulky - znakové sady</h3>
+<ul>
+<li>základní tabulka pro zakódování a dekódování znaků z binárního kódu</li>
+<li>s rozvojem počítačů vznikaly další kódové tabulky doplněné o znaky národních abeced</li>
+<li></li>
+<li>ASCII(American Standard Code for Information Interchange)</li>
+<li>ASCII &#8211; 7bit &#8211; původní základní tabulka, znaky bez diakritiky, 128 znaků</li>
+<li>ASCII &#8211; 8bit &#8211; rozšířený kód, 256 znaků (128 normovaných + 128 podle národní znakové sady) &#8211; všeobecně rozšířená</li>
+</ul>
+<h4>České znakové sady</h4>
+<ul>
+<li>Kamenických, PC Latin, ISO Latin, Windows 1250 &#8211; obsahují znaky české abecedy</li>
+</ul>
+<h4>Univerzální znakové sady</h4>
+<ul>
+<li>UNICODE, UTF-8 &#8211; využívají více národnostních sad zároveň</li>
+</ul>
+<h3>Číselné soustavy</h3>
+<ul>
+<li>Soustavy pro vyjádření informací za pomocí kombinace čísel či písmen</li>
+</ul>
+<h4>Binární kód</h4>
+<ul>
+<li><strong>desítkový kód</strong> &#8211; běžná čísla v zapsaná desítkové soustavě</li>
+<li><strong>binární kód</strong> &#8211; čísla zapsaná ve dvojkové číselné soustavě
+<ul>
+<li>dá se vyjádřit skupinami dvou číslic  1100 1101 1111 0011 </li>
+<li>je vhodný pro zpracování informace na elektrickém stroji &#8211; počítači
+<ul>
+<li>označuje se jako <strong>strojový kód</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Číselné soustavy</h4>
+<ul>
+<li>běžně používané číselné soustavy jsou desítková, dvojková a šestnáctková</li>
+<li>stroje pracují s binárním kódem &#8211; dvojkovou soustavu (např. počítače nebo kalkulačky)</li>
+<li>pro přehlednější zápis kódu a adres používají programátoři hexadecimální tvar
+<div></div>
+</li>
+<li>dvojková &#8211; <strong>binární</strong> soustava
+<ul>
+<li>číselná soustava o základu 2</li>
+<li>číslice 0 1</li>
+<li> (1100 1011)<sub>2</sub> </li>
+</ul>
+</li>
+<li>osmičková &#8211; <strong>oktalová</strong> soustava
+<ul>
+<li>číselná soustava o základu 8</li>
+<li>číslice 0 1 2 3 4 5 6 7</li>
+<li> (26 71 03)<sub>8</sub> </li>
+</ul>
+</li>
+<li>desítková &#8211; <strong>decimální</strong> soustava
+<ul>
+<li>číselná soustava o základu 10</li>
+<li>číslice 0 1 2 3 4 5 6 7 8 9</li>
+<li> (269 980)<sub>10</sub> </li>
+</ul>
+</li>
+<li>šestnáctková &#8211; <strong>hexadecimální</strong> soustava
+<ul>
+<li>číselná soustava o základu 16</li>
+<li>číslice 0 1 2 3 4 5 6 7 8 9 A B C D E F</li>
+<li> (A25)<sub>16</sub> </li>
+</ul>
+</li>
+</ul>
+<div  ></div>
+<h5>Zjištění desítkové hodnoty čísla</h5>
+<ul>
+<li>obecný vztah pro vyjádření desítkové hodnoty čísla <strong>C</strong> v soustavě o základu <strong>z</strong></li>
+</ul>
+<div  >(C)<sub>z</sub> = a<sub>n</sub>.z<sup>n</sup> + a<sub>n-1</sub>.z<sup>n-1</sup> + &#8230; + a<sub>1</sub>.z<sup>1</sup> + a<sub>0</sub>.z<sup>0</sup> </div>
+<div  ></div>
+<ul>
+<li>Příklady :</li>
+</ul>
+<div  >
+<p>(1001101)<sub>2</sub> = 1.2<sup>6</sup>+0.2<sup>5</sup>+0.2<sup>4</sup>+1.2<sup>3</sup>+1.2<sup>2</sup>+0.2<sup>1</sup>+1.2<sup>0</sup> = 64+0+0+8+4+0+1 = (77)<sub>10</sub></p>
+<div></div>
+</div>
+<div  >
+<p>(257)<sub>8</sub> = 2.8<sup>2</sup>+5.8<sup>1</sup>+7.8<sup>0</sup> = 128+40+7 = (175)<sub>10</sub></p>
+<div></div>
+</div>
+<div  >(B3)<sub>16</sub> = B.16<sup>1</sup>+3.16<sup>0</sup> = 11.16+3.1 = (179)<sub>10</sub></div>
+<div  ></div>
+<h5>Převod číselných soustav</h5>
+<ul>
+<li>využítí metody <strong>Dělení základem</strong></li>
+<li>převod celého desítkového čísla na číslo v číselné soustavě o základu <strong>z</strong></li>
+</ul>
+<hr   />
+<table border="0">
+<tbody>
+<tr>
+<th>Dělení</th>
+<th>Podíl</th>
+<th>Zbytek</th>
+</tr>
+<tr>
+<td align="right">(109)<sub>10</sub>/2</td>
+<td align="right">54</td>
+<td align="center">1</td>
+<td align="center">pravá pozice</td>
+</tr>
+<tr>
+<td align="right">(54)<sub>10</sub>/2</td>
+<td align="right">27</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="right">(27)<sub>10</sub>/2</td>
+<td align="right">13</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="right">(13)<sub>10</sub>/2</td>
+<td align="right">6</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="right">(6)<sub>10</sub>/2</td>
+<td align="right">3</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="right">(3)<sub>10</sub>/2</td>
+<td align="right">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="right">(1)<sub>10</sub>/2</td>
+<td align="right">0</td>
+<td align="center">1</td>
+<td align="center">levá pozice</td>
+</tr>
+</tbody>
+</table>
+<hr   />
+<div  > (109)<sub>10</sub> = (1101101)<sub>2</sub> </div>
+<hr   />
+<h5>Cvičení</h5>
+<ul>
+<li>převeďte dělením čislo (187)<small>10</small> na číslo zapsané v <strong>oktalové</strong> číselné soustavě</li>
+<li>převeďte dělením čislo (187)<small>10</small> na číslo zapsané v <strong>hexadecimální</strong> číselné soustavě</li>
+</ul>
+<hr   />
+<h4>Odkazy</h4>
+<ul>
+<li><a href="http://www.prevod.cz/popis.php?str=564&amp;parent=y" target="_blank" rel="nofollow">Číselné soustavy</a></li>
+<li><a href="http://www.prevod.cz/index.php?str=564&amp;raz=1" target="_blank" rel="nofollow">Převod číselných soustav</a></li>
+</ul>
+<h3>Datové soubory</h3>
+<h4>Soubor dat</h4>
+<ul>
+<li>uspořádaná skupina dat uložená na datovém médiu (disketa, pevný disk, CD, paměťová karta &#8230;)</li>
+<li>identifikace souboru je dána <strong>jménem</strong> a <strong>příponou</strong></li>
+<li>způsob rozložení dat souboru na disku je určen souborovým systémem</li>
+</ul>
+<h4>Vlastnosti souborů</h4>
+<ul>
+<li>jméno</li>
+<li>typ</li>
+<li>velikost</li>
+<li>čas vytvoření</li>
+<li>čas změny</li>
+<li>zabezpečení</li>
+</ul>
+<h4>Typy souborů</h4>
+<ul>
+<li>spustitelné programy &#8211; EXE. COM, (BAT)</li>
+<li>systémové soubory &#8211; SYS,BIN,DLL &#8230;</li>
+<li>datové soubory &#8211; TXT, DOC, JPG, BMP, DWG &#8230;</li>
+</ul>
+<h3>Souborový systém</h3>
+<ul>
+<li>způsob organizace informací na paměťovém médiu</li>
+<li>určuje způsob logického členění a identifikace dat</li>
+<li>souborové systémy pro Windows &#8211; FAT32, NTFS</li>
+</ul>
+<h4>Prvky souborového systému</h4>
+<ul>
+<li><strong>Tabulka oddílů PAT</strong> &#8211; <strong>P</strong>artitions <strong>A</strong>llocation <strong>T</strong>able (MBR Master Boot Record)
+<ul>
+<li>uložena v nultém sektoru disku</li>
+<li>popisuje logické členení disku na oddíly a umožňuje start OS z aktivního oddílu</li>
+</ul>
+</li>
+<li><strong>Diskový oddíl</strong> &#8211; Partition
+<ul>
+<li>vytváří na pevném disku logickou diskovou jednotku</li>
+<li>na jednom disku lze vytvořit větší počet logických jednotek C:, D:, E: &#8230;</li>
+</ul>
+</li>
+<li><strong>Zaváděcí sektor</strong> &#8211; BOOT sector</li>
+<li><strong>Tabulka umístění souborů FAT</strong> &#8211; <strong>F</strong>ile <strong>A</strong>llocation <strong>T</strong>able</li>
+<li><strong>Kořenový adresář ROOT Directory</strong></li>
+<li><strong>Datová oblast</strong></li>
+<li><strong>Sektor disku</strong>
+<ul>
+<li>část kruhové stopy (tracku) pro uložení dat &#8211; nejčastěji 512 B</li>
+</ul>
+</li>
+<li><strong>Alokační jednotka &#8211; Cluster</strong>
+<ul>
+<li>nejmenší logická jednotka disku pro uložení dat</li>
+<li>zabírá jeden nebo více sektorů &#8211; viz tabulka</li>
+</ul>
+</li>
+</ul>
+<h4>Schema dělení disku</h4>
+<p>
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<ul>
+<li>Sektory a stopy</li>
+</ul>
+</td>
+<td valign="top">
+<ul>
+<li>Datové oblasti disku</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top"><img title="sektory" src="http://info.spsnome.cz/uploads/Informatika/sector.gif" alt="sektory" height="300" /></td>
+<td valign="top"><img title="fat" src="http://info.spsnome.cz/uploads/Informatika/fat.gif" alt="fat" height="300" /></td>
+</tr>
+</tbody>
+</table>
+</p>
+<h4>Parametry souborového systému</h4>
+<p>
+<table border="1">
+<tbody>
+<tr>
+<td align="center">Souborový systém</td>
+<td align="center">max. soubor</td>
+<td align="center">max. počet</td>
+<td align="center">max. oddíl</td>
+<td align="center">rok</td>
+<td align="center">použití</td>
+</tr>
+<tr>
+<td align="center">FAT 12</td>
+<td align="right">32 MB</td>
+<td align="right">2<sup>12</sup>=4077</td>
+<td align="right">32 MB</td>
+<td align="center">1977</td>
+<td align="center">MS DOS &#8211; FDD</td>
+</tr>
+<tr>
+<td align="center">FAT 16</td>
+<td align="right">2 GB</td>
+<td align="right">2<sup>16</sup>=65517</td>
+<td align="right">2 GB</td>
+<td align="center">1988</td>
+<td align="center">MS DOS &#8211; HDD</td>
+</tr>
+<tr>
+<td align="center">FAT 32</td>
+<td align="right">4 GB</td>
+<td align="right">2<sup>28</sup>=268235237</td>
+<td align="right">2 TB</td>
+<td align="center">1996</td>
+<td align="center">WIN 95 OSR2</td>
+</tr>
+<tr>
+<td align="center">NTFS</td>
+<td align="right">16 TB</td>
+<td align="right">2<sup>32</sup>=4294967296</td>
+<td align="right">256 TB</td>
+<td align="center">1993</td>
+<td align="center">WIN NT</td>
+</tr>
+<tr>
+<td align="center">ext2</td>
+<td align="right">16 GB</td>
+<td align="center">?</td>
+<td align="right">2 TB</td>
+<td align="center">1993</td>
+<td align="center">LINUX</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

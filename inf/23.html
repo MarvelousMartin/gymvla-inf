@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+
+<!--
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="cs">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styly.css">
+	<title>Informatika - Maturitní témata</title>
+	<meta property="fb:admins" content="100001802478636">
+	<link rel="author" href="https://plus.google.com/+stepanpesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="../night-mode.js"></script>
+</head>
+<body>
+<div id="nadpis"><h1>Informatika</h1></div>
+<div id="menu"><a href="index.html">INFORMATIKA</a>|<a href="../cjl/index.html">ČEŠTINA</a>|<a href="../anj/index.html">ANGLIČTINA</a></div>
+<div id="mode" onclick="night();">NOČNÍ MÓD</div>
+<div id="obsah">
+
+<!--**************** OBSAH ****************-->	
+
+<h2>Zpracování databází</h2>
+ 
+<ul>
+<li><strong>Databázové systémy</strong> &#8211; definice, databáze, správa dat</li>
+<li><strong>Systém Access</strong> &#8211; vlastnosti, relační databáze, objekty v databázi</li>
+<li><strong>Datové tabulky</strong> &#8211; typy dat, úpravy, import dat, vztahy &#8211; relace</li>
+<li><strong>Zpracování dat</strong> &#8211; dotazy, formuláře a sestavy</li>
+</ul>
+<hr />
+<h3>Databázové systémy</h3>
+<p><img title="tabulka" src="http://info.spsnome.cz/uploads/Maturita/pvy-0601.jpg" alt="tabulka" /></p>
+
+<ul>
+<li><strong>Definice</strong>
+<ul>
+<li>systémy pro ukládání, zpracování a zpřístupnění velkých skupin dat</li>
+<li>zahrnuje řídící software a vlastní data</li>
+</ul>
+</li>
+<li><strong>Databáze</strong> &#8211; uspořádaná skupina dat
+<dl>
+<dd>
+<ul>
+<li>hierarchické, síťové, objektové a relační uspořádání dat</li>
+<li><strong>Síťové databáze</strong> &#8211; klienti přistupují k datům soustředěným na datovém <a id="vfa32efcd0eeb219d2085450377feedf2" href="http://dynamicit.cz/server-hosting/">serveru</a></li>
+<li><strong>Místní databáze</strong> &#8211; databázový systém je provozován na jediném počítači</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><strong>SŘBD</strong> &#8211; software pro řízení báze dat
+<dl>
+<dd>
+<ul>
+<li>Oracle, MySQL, MS SQL server, MS Access, OO Base</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<h3>Systém Access</h3>
+<ul>
+<li><strong>Vlastnosti systému</strong>
+<ul>
+<li>systém pro správu relačních databází od Microsoftu, součást balíku MS Office</li>
+<li>přehledné grafické rozhraní pro vývoj i správu databáze</li>
+<li>možnost správy místní i síťové databáze</li>
+<li>databáze uložena v souboru <strong>mdb</strong> (2003,2007) nebo <strong>accdb</strong></li>
+<li>hlavním objektem databáze jsou tabulky &#8211; relace</li>
+</ul>
+</li>
+<li><strong>Relační databáze</strong> &#8211; tabulkové uspořádání dat (nejobvyklejší)
+<ul>
+<li>relace (table) = tabulka</li>
+<li>záznam (record) = řádek tabulky</li>
+<li>vlastnost (attribute) = sloupec tabulky</li>
+<li>pole (field) = buňka tabulky</li>
+<li>vztah (relationship) = vztahy mezi daty v tabulkách</li>
+</ul>
+</li>
+<li><strong>Objekty v databázi</strong>
+<ul>
+<li>datové tabulky, dotazy, formuláře, sestavy, makra a programové moduly</li>
+</ul>
+</li>
+</ul>
+<h3>Datové tabulky</h3>
+<ul>
+<li><strong>Typy dat</strong>
+<ul>
+<li>čísla &#8211; celá, desetinná, automatické číslo</li>
+<li>text &#8211; max. 255 znaků, memo &#8211; max. 65 535 znaků</li>
+<li>datum a čas, logická hodnota, hypertextový odkaz</li>
+<li>OLE objekt &#8211; soubory, obrázky &#8230;</li>
+</ul>
+</li>
+<li><strong>Úpravy</strong>
+<ul>
+<li>Návrhové zobrazení
+<ul>
+<li>primární klíč, typ dat, titulek, formát dat, vstupní maska, ověřovací pravidlo</li>
+</ul>
+</li>
+<li>Tabulkové zobrazení
+<ul>
+<li>zápis a editace dat, pořadí sloupců, změna titulků, řazení a filtrace dat</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Import dat</strong>
+<ul>
+<li>databáze Access, tabulka Excel, soubory TXT a XML</li>
+</ul>
+</li>
+<li><strong>Vztahy relace</strong>
+<ul>
+<li>vztahy mezi klíčovými poli (vlastnostmi) tabulek</li>
+<li><strong>1:1</strong> &#8211; jména &#8211; bydliště
+<ul>
+<li>jednomu záznamu v tabulce odpovídá jeden záznam v druhé tabulce</li>
+</ul>
+</li>
+<li><strong>1:N</strong> &#8211; spisovatel &#8211; knihy
+<ul>
+<li>jeden záznam v první tabulce odpovídá více záznamům v druhé tabulce, jednomu záznamu z druhé tabulky odpovídá jeden záznam z první tabulky</li>
+</ul>
+</li>
+<li><strong>M:N</strong> &#8211; čtenáři &#8211; knihy
+<ul>
+<li>jednomu záznamu v první tabulce odpovídá více záznamů v druhé tabulce a naopak</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Zpracování dat</h3>
+<ul>
+<li><strong>Dotazy</strong> &#8211; pojmenované definice pro výběr dat z jedné nebo více tabulek
+<ul>
+<li>Výběrové &#8211; využití výběrových kritérií a logických operací</li>
+<li>Souhrnné &#8211; možnost souhrnných operací &#8211; suma, avg, count, min, max</li>
+<li>Vytvářecí &#8211; možnost tvorby nových položek výpočtem &#8211; využití tvůrce výrazů</li>
+</ul>
+</li>
+<li><strong>Formuláře</strong> &#8211; pojmenovaná okna pro zadávání, editaci a zobrazení dat</li>
+<li><strong>Sestavy</strong> &#8211; pojmenované přehledy dat pro zobrazení a tisk</li>
+</ul>
+
+
+
+<!--**************************************-->
+
+<!--
+
+<h2>Téma</h2>
+	
+<h3>Nadpis</h3>
+
+<p>
+Odstavec textu s <a href="#">odkazem</a>
+</p>
+
+<xmp>
+Kód
+</xmp>
+
+<img src="obrázek">
+<img src="obrázek" id="obtékaný">
+<span>Popisek obrázku</span>
+
+-->
+
+</div>
+</body>
+</html>

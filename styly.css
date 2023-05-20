@@ -1,0 +1,86 @@
+/*
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+*****@stepanpesout******
+************************
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+
+body
+{
+font-family: 'Roboto', sans-serif;
+background-color:#fff;
+}
+
+#nadpis, #inf, #anj, #cjl
+{
+color:#fff;
+font-size:24pt;
+text-align:center;
+padding:18px;
+}
+
+#nadpis
+{
+background-color:#fff;
+color:#000;
+font-size:30pt;
+}
+
+#inf
+{
+background-color:#8e44ad;
+cursor: pointer;
+}
+
+
+#anj
+{
+background-color:#27ae60;
+cursor: pointer;
+}
+
+
+#cjl
+{
+background-color:#c0392b;
+cursor: pointer;
+}
+
+a
+{
+text-decoration:none;
+color:white;
+}
+
+xmp
+{
+white-space: pre-wrap;
+background-color:#eee;
+padding:10px;
+padding-bottom:30px;
+border-radius:3px;
+font-family: 'Roboto Mono', monospace;
+font-size:9pt;
+width:90%;
+max-width:900px;
+color:#000;
+margin:auto;
+left:0;
+right:0;
+margin-top:20px;
+}
+
+td, th
+{
+border: 1px solid black;
+padding:3px;
+}
+
+th
+{
+font-weight:bold;
+background-color:#ddd;
+}
